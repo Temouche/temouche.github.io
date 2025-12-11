@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <title>Portfolio - Témi Kergastel</title>
+        <meta charset="UTF-8">
+        <link href="css/style.css" media="all" rel="Stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="js/include.js"></script>
+        <script src="js/scrollbar.js"></script>
+        <script src="js/menu-btn.js"></script>
+    </head>
+    <body class="bg-[#0d0d0d] tracking-wide text-white">
+
+        <!-- Château arrière-plan -->
+        <img src="images/chateau-placeholder-mobile.png" class="absolute top-0 left-0 w-screen h-[110vh] object-cover pointer-events-none -z-15 lg:hidden">
+
+        <img src="images/chateau-placeholder.png" class="absolute top-0 left-0 w-screen h-[110vh] object-cover pointer-events-none -z-15 hidden lg:block">
+
+        <video autoplay muted loop class="absolute top-0 left-0 w-screen h-[110vh] object-cover pointer-events-none -z-10 lg:hidden">
+            <source src="videos/accueil-mobile.mp4" type="video/mp4">
+        </video>
+
+        <video autoplay muted loop class="absolute top-0 left-0 w-screen h-[110vh] object-cover pointer-events-none -z-10 hidden lg:block">
+            <source src="videos/accueil.mp4" type="video/mp4">
+        </video>
+
+        <!-- Bouton Menu Flottant -->
+        <div id="menuFlottant" class="fixed top-5 right-5 opacity-0 pointer-events-none transition-opacity duration-200 z-30">
+            <a class="flex items-center gap-4 transition hover:bg-[#0d0d0d] bg-[#242424] px-4 py-2 rounded-lg" href="#">
+                <img src="images/fleche-h.png" alt="Menu" class="h-6 w-auto">
+                <div>
+                    Menu
+                </div>
+            </a>
+        </div>
+
+        <!-- Menu (choix des pages) -->
+        <div class="min-h-screen px-10 lg:px-20 py-15 text-black">
+            <h1 class="text-8xl tracking-tight">TÉMI KERGASTEL</h1>
+
+            <nav class="flex flex-col items-start space-y-6 text-4xl pt-16">
+                <a href="#projets" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Projets</a>
+                <a href="#competences" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Compétences</a>
+                <a href="#a-propos" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">À propos</a>
+                <a href="#contact" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Contact</a>
+            </nav>
+        </div>
+
+        <img src="images/remparts.png" class="absolute -z-5">
+
+        <!-- Portfolio -->
+        <div class="space-y-23 mt-60 mb-25 px-10 lg:px-20">
+            
+            <!-- Projets -->
+            <div class="flex items-center gap-8">
+                <h2 id="projets" class="text-5xl scroll-mt-23">MES PROJETS</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-5 h-5">
+            </div>
+
+            <div class="grid grid-cols-3 gap-6">
+
+                <!-- Projet 1 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/ovni.html">
+                    <img src="images/projets/kinetic.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Kinetic Typography</h3>
+                        <p class="text-xs pt-1">Déc. 2025</p>
+                        <p class="text-sm pt-3">Animation en motion design des paroles d'une musique.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>AFTER EFFECTS</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 2 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/chateau.html">
+                    <img src="images/projets/chateau.png" alt="Château" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Jeu de l'Abeille</h3>
+                        <p class="text-xs pt-1">Déc. 2025</p>
+                        <p class="text-sm pt-3">Programmation d'un jeu de snake.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>PYTHON</span>
+                        </span>
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                            <span>PHOTOSHOP</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 3 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/chateau.html">
+                    <img src="images/projets/chateau.png" alt="Château" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Château Ardent</h3>
+                        <p class="text-xs pt-1">Nov. 2025</p>
+                        <p class="text-sm pt-3">Modélisation 3D d'un château fort entouré de lave.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>BLENDER</span>
+                        </span>
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                            <span>PHOTOSHOP</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 4 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/chateau.html">
+                    <img src="images/projets/chateau.png" alt="Château" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Le Cube</h3>
+                        <p class="text-xs pt-1">Nov. 2025</p>
+                        <p class="text-sm pt-3">Webdocumentaire présentant le Speedcubing.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>HTML</span>
+                        </span>
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                            <span>CSS</span>
+                        </span>
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                            <span>JAVASCRIPT</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 5 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/ovni.html">
+                    <img src="images/projets/ovni.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Paysage Extraterrestre</h3>
+                        <p class="text-xs pt-1">Oct. 2025</p>
+                        <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>AFTER EFFECTS</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 6 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/ovni.html">
+                    <img src="images/projets/ovni.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Paysage Extraterrestre</h3>
+                        <p class="text-xs pt-1">Oct. 2025</p>
+                        <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>AFTER EFFECTS</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 7 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/ovni.html">
+                    <img src="images/projets/ovni.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Paysage Extraterrestre</h3>
+                        <p class="text-xs pt-1">Oct. 2025</p>
+                        <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>AFTER EFFECTS</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 8 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/ovni.html">
+                    <img src="images/projets/ovni.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Paysage Extraterrestre</h3>
+                        <p class="text-xs pt-1">Oct. 2025</p>
+                        <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>AFTER EFFECTS</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet 9 -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3]" href="html/projets/ovni.html">
+                    <img src="images/projets/ovni.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115" />
+                    <div class="absolute top-0 px-5 py-4 opacity-0 transition duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-2xl font-bold">Paysage Extraterrestre</h3>
+                        <p class="text-xs pt-1">Oct. 2025</p>
+                        <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
+                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
+                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                            <span>AFTER EFFECTS</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+            <hr class="opacity-30">
+
+            <!-- Compétences -->
+            <div class="flex items-center gap-8">
+                <h2 id="competences" class="text-5xl scroll-mt-23">MES COMPÉTENCES</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-5 h-5">
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-20 font-black text-black justify-center w-[90%] lg:w-full mx-auto">
+
+                <!-- Logiciels -->
+                <div class="space-y-6 w-full lg:w-1/2">
+
+                    <div class="flex items-center justify-center gap-4 px-2 mb-8">
+                        <img src="../images/croix.png" alt="Croix" class="w-4 h-4 opacity-40">
+                        <h3 class="text-2xl font-light text-white">Logiciels</h3>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-6">
+                        
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Blender</div>
+                            <img src="images/competences/blender.png" alt="Blender" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe After Effects</div>
+                            <img src="images/competences/aftereffects.png" alt="After Effects" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe Premiere Pro</div>
+                            <img src="images/competences/premierepro.png" alt="Premiere Pro" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe Photoshop</div>
+                            <img src="images/competences/photoshop.png" alt="Photoshop" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe Illustrator</div>
+                            <img src="images/competences/illustrator.png" alt="Illustrator" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe InDesign</div>
+                            <img src="images/competences/indesign.png" alt="InDesign" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe XD</div>
+                            <img src="images/competences/xd.png" alt="Adobe XD" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Figma</div>
+                            <img src="images/competences/figma.png" alt="Figma" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Unity</div>
+                            <img src="images/competences/unity.png" alt="Unity" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Langages -->
+                <div class="space-y-6 w-full lg:w-1/2">
+
+                    <div class="flex items-center justify-center gap-4 px-2 mb-8">
+                        <img src="../images/croix.png" alt="Croix" class="w-4 h-4 opacity-40">
+                        <h3 class="text-2xl font-light text-white">Langages</h3>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-6">
+                        
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Python</div>
+                            <img src="images/competences/python.png" alt="Python" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Java</div>
+                            <img src="images/competences/java.png" alt="Java" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">HTML</div>
+                            <img src="images/competences/html.png" alt="HTML" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">CSS</div>
+                            <img src="images/competences/css.png" alt="CSS" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">JavaScript</div>
+                            <img src="images/competences/javascript.png" alt="JavaScript" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">PHP</div>
+                            <img src="images/competences/php.png" alt="PHP" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">SQL</div>
+                            <img src="images/competences/sql.png" alt="SQL" 
+                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="opacity-30">
+
+            <!-- À propos -->
+            <div class="flex items-center gap-8">
+                <h2 id="a-propos" class="text-5xl scroll-mt-23">À PROPOS</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-5 h-5">
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-15">
+                <div class="md:w-[30%]">
+                    <img src="images/photo-profil.png" alt="Photo de profil" class="rounded-full w-50 h-50 mx-auto transition-transform duration-400 hover:scale-105">
+                </div>
+                <div class="md:w-[70%] space-y-5 text-lg">
+                    <div>
+                        Étudiant de 21 ans en deuxième année de BUT MMI (Métiers du Multimédia et de l'Internet), spécialité développement web et dispositifs interactifs, 
+                        je développe mes compétences à travers des projets variés qui me motivent au quotidien.
+                    </div>
+                    <div>
+                        Passionné par l’univers de la 3D, je cherche aujourd’hui à fusionner ma rigueur technique et mon œil artistique pour rejoindre 
+                        l'industrie du divertissement (animation, jeu vidéo).
+                    </div>
+                    <div>
+                        Recherchant un stage de 3 mois pour mai 2026, je reste ouvert à toute opportunité.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div data-include="html/contact.html" class="space-y-23 mt-23 mb-23 px-10 lg:px-20"></div>
+
+        <!-- Footer -->
+        <hr class="opacity-30">
+
+        <footer id="mentions-legales" class="b-0 bg-[#1A1A1A]" >
+            <div class="py-8 px-10 lg:px-20 flex justify-between">
+                
+                <div>© 2025 Témi Kergastel. Tous droits réservés.</div>
+                <a href="../html/mentions-legales.html" class="underline transition-opacity hover:opacity-75">Mentions Légales</a>
+            </div>
+        </footer>
+    </body>
+</html>

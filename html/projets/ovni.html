@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8">
+        <link href="../../css/style.css" media="all" rel="Stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="../../js/include.js"></script>
+        <script src="../../js/scrollbar.js"></script>
+        <script src="../../js/projet.js"></script>
+    </head>
+    <body class="min-h-screen flex flex-col bg-[#0d0d0d] tracking-wide text-white">
+        <!-- Navbar -->
+        <nav data-include="../navbar.html" class="sticky top-0 h-18 py-5 px-10 bg-[#0d0d0d] flex items-center justify-between z-50"></nav>
+
+        <!-- Section Projet (remplace ta section existante) -->
+        <div class="w-full px-10 lg:px-20 mt-10 space-y-13">
+
+            <!-- Titre, date et outils -->
+            <div class="flex justify-between w-full">
+                <h2 class="text-6xl">CHÂTEAU ARDENT</h2>
+                <div class="text-right space-y-2">
+                <div class="text-base">Novembre 2025</div>
+                <div class="text-xl font-black">Blender, Photoshop</div>
+                </div>
+            </div>
+
+            <!-- Contenu -->
+            <div class="flex flex-col lg:flex-row justify-between gap-20 w-full">
+                <div class="lg:w-[40%]">
+                    <h3 class="text-2xl font-bold mb-3">Contexte :</h3>
+                    <p class="mb-10">
+                    Dans le cadre du cours de production 3D, nous devions modéliser un batîment sur Blender avec la contrainte de <strong>ne pas utiliser
+                    le mode Edit</strong>, qui est normalement indispensable.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Réalisation :</h3>
+                    <p>
+                    J'ai choisi de modéliser un château en m'inspirant de celui de <strong>Bowser</strong> dans l'univers de Mario.<br>
+                    Pour soustraire les objets entre eux, j'ai utilisé le <strong>modificateur booléan</strong>.
+                    Une fois la modélisation terminée, j'ai appliqué des couleurs, des textures et des lumières, ainsi qu'un sol et des douves de lave.
+                    </p>
+                    <p class="mb-10">
+                    Afin de rendre le tout plus réaliste, j'ai modifié le rendu sur Photoshop, ce qui a permis d'avoir <strong>une atmosphère
+                    effrayante et un rendu cinématique</strong>.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Conclusion :</h3>
+                    <p>
+                    Ne pas utiliser le mode Edit était assez frustrant, mais cela a testé ma patience et m'a beaucoup appris. 
+                    Je suis fier du résultat que je trouve très esthétique.
+                    </p>
+                </div>
+
+
+                <div class="lg:w-[60%] flex flex-col items-center relative">
+                    <div class="relative group w-full">
+                        <!-- Flèche gauche -->
+                        <img id="btn-prev" src="../../images/fleche-g.png" alt="Précédent"
+                            class="absolute top-1/2 left-2 -translate-y-1/2 w-8 h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
+
+                        <!-- Image principale -->
+                        <img id="carrousel-main" src="../../images/projets/chateau.png" alt="Image principale"
+                            class="w-full h-auto object-cover mb-3 rounded-lg aspect-video cursor-zoom-in select-none" role="button" aria-label="Ouvrir l'image en grand">
+
+                        <!-- Flèche droite -->
+                        <img id="btn-next" src="../../images/fleche-d.png" alt="Suivant"
+                            class="absolute top-1/2 right-2 -translate-y-1/2 w-8 h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
+                    </div>
+
+                    <!-- Miniatures -->
+                    <div id="carrousel-thumbs" class="flex justify-center gap-3 w-full">
+                        <img src="../../images/projets/chateau.png" alt="Miniature 1" class="w-30 h-20 object-cover cursor-pointer rounded-lg" data-full="../../images/projets/chateau.png">
+                        <img src="../../images/projets/preview.jpg" alt="Miniature 2" class="w-30 h-20 object-cover cursor-pointer rounded-lg" data-full="../../images/projets/preview.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox (JS) -->
+        <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+            <button id="lightbox-close" class="absolute top-6 right-6 z-60 cursor-pointer outline-none">
+                <img src="../../images/croix.png" class="h-6 w-auto">
+            </button>
+            <img id="lightbox-img" src="../../images/projets/chateau.png" alt="Image agrandie"
+                class="max-w-[90%] max-h-[90%] rounded-lg shadow-xl">
+        </div>
+
+        <!-- Contact -->
+        <div data-include="../contact.html" class="space-y-23 mt-23 mb-23 px-10 lg:px-20"></div>
+        
+        <!-- Footer -->
+        <hr class="opacity-30 mt-auto">
+
+        <footer id="mentions-legales" class="b-0 bg-[#1A1A1A]" >
+            <div class="py-8 px-10 lg:px-20 flex justify-between">
+                
+                <div>© 2025 Témi Kergastel. Tous droits réservés.</div>
+                <a href="../mentions-legales.html" class="underline transition-opacity hover:opacity-75">Mentions Légales</a>
+            </div>
+        </footer>
+    </body>    
+</html>

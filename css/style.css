@@ -1,0 +1,46 @@
+body {
+  font-family: "Manrope-Regular";
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2 {
+  font-family: "Amarante";
+}
+
+nav {
+  font-family: "Manrope-Medium";
+}
+
+.gradient_blur {
+  filter: blur(10px);
+}
+
+@font-face {
+  font-family: "Amarante";
+  src: url("../fonts/Amarante-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("../fonts/manrope/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url("../fonts/manrope/Manrope-Medium.ttf");
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
