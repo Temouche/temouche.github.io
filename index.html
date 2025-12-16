@@ -2,32 +2,32 @@
 <html lang="fr" class="scroll-smooth">
     <head>
         <title>Portfolio - Témi Kergastel</title>
-        <meta name="viewport" content="width=device-width" charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" media="all" rel="Stylesheet" type="text/css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="js/include.js"></script>
         <script src="js/scrollbar.js"></script>
         <script src="js/menu-btn.js"></script>
     </head>
     <body class="bg-[#0d0d0d] tracking-wide text-white">
 
         <!-- Château arrière-plan -->
-        <img src="images/chateau-placeholder-mobile.png" class="absolute top-0 left-0 w-screen h-[105vh] object-cover pointer-events-none -z-15 lg:hidden">
+        <img src="images/chateau-placeholder-mobile.png" class="absolute top-0 left-0 w-full h-[105vh] object-cover pointer-events-none -z-15 lg:hidden">
 
-        <img src="images/chateau-placeholder.png" class="absolute top-0 left-0 w-screen h-[110vh] object-cover pointer-events-none -z-15 hidden lg:block">
+        <img src="images/chateau-placeholder.png" class="absolute top-0 left-0 w-full h-[110vh] object-cover pointer-events-none -z-15 hidden lg:block">
 
-        <video autoplay muted loop class="absolute top-0 left-0 w-screen h-[105vh] object-cover pointer-events-none -z-10 lg:hidden">
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-[105vh] object-cover pointer-events-none -z-10 lg:hidden">
             <source src="videos/accueil-mobile.mp4" type="video/mp4">
         </video>
 
-        <video autoplay muted loop class="absolute top-0 left-0 w-screen h-[110vh] object-cover pointer-events-none -z-10 hidden lg:block">
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-[110vh] object-cover pointer-events-none -z-10 hidden lg:block">
             <source src="videos/accueil.mp4" type="video/mp4">
         </video>
 
         <!-- Bouton Menu Flottant -->
-        <div id="menuFlottant" class="fixed top-5 right-5 opacity-0 pointer-events-none transition-opacity duration-200 z-30">
-            <a class="flex items-center gap-4 transition hover:bg-[#0d0d0d] bg-[#242424] px-4 py-2 rounded-lg" href="#">
-                <img src="images/fleche-h.png" alt="Menu" class="h-6 w-auto">
+        <div id="menuFlottant" class="fixed top-3 right-3 sm:top-5 sm:right-5 opacity-0 pointer-events-none transition-opacity duration-200 z-30">
+            <a class="flex items-center gap-2 sm:gap-4 transition hover:bg-[#0d0d0d] bg-[#242424] px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-sm sm:text-base" href="#">
+                <img src="images/fleche-h.png" alt="Menu" class="h-5 w-auto sm:h-6">
                 <div>
                     Menu
                 </div>
@@ -35,10 +35,10 @@
         </div>
 
         <!-- Menu (choix des pages) -->
-        <div class="min-h-screen px-20 py-15 text-black">
-            <h1 class="text-8xl tracking-tight">TÉMI KERGASTEL</h1>
+        <div class="min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 lg:py-15 text-black">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight">TÉMI KERGASTEL</h1>
 
-            <nav class="flex flex-col items-start space-y-6 text-4xl pt-16">
+            <nav class="flex flex-col items-start space-y-4 sm:space-y-6 text-2xl sm:text-3xl lg:text-4xl pt-8 sm:pt-12 lg:pt-16">
                 <a href="#projets" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Projets</a>
                 <a href="#competences" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Compétences</a>
                 <a href="#a-propos" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">À propos</a>
@@ -49,27 +49,27 @@
         <img src="images/remparts.png" class="absolute -z-5">
 
         <!-- Portfolio -->
-        <div class="space-y-23 mt-60 px-20">
+        <div class="space-y-12 sm:space-y-16 lg:space-y-23 mt-20 sm:mt-32 md:mt-40 lg:mt-60 px-4 sm:px-8 md:px-12 lg:px-20">
             
             <!-- Projets -->
-            <div class="flex items-center gap-8">
-                <h2 id="projets" class="text-5xl scroll-mt-23">MES PROJETS</h2>
-                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-5 h-5">
+            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+                <h2 id="projets" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">MES PROJETS</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
 
                 <!-- Projet 1 -->
                 <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/projets/ovni.html">
                     <img src="images/projets/kinetic.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115"/>
-                    <div class="absolute top-0 px-5 py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
-                        <h3 class="text-2xl font-bold">Kinetic Typography</h3>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(13,13,13,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Kinetic Typography</h3>
                         <p class="text-xs pt-1">Déc. 2025</p>
-                        <p class="text-sm pt-3">Animation en motion design des paroles d'une musique.</p>
+                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Animation en motion design des paroles d'une musique.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
@@ -83,13 +83,13 @@
                         <p class="text-xs pt-1">Déc. 2025</p>
                         <p class="text-sm pt-3">Programmation d'un jeu de snake.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>PYTHON</span>
                         </span>
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>PHOTOSHOP</span>
                         </span>
                     </div>
@@ -103,13 +103,13 @@
                         <p class="text-xs pt-1">Nov. 2025</p>
                         <p class="text-sm pt-3">Modélisation 3D d'un château fort entouré de lave.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>BLENDER</span>
                         </span>
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>PHOTOSHOP</span>
                         </span>
                     </div>
@@ -123,17 +123,17 @@
                         <p class="text-xs pt-1">Nov. 2025</p>
                         <p class="text-sm pt-3">Webdocumentaire présentant le Speedcubing.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>HTML</span>
                         </span>
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>CSS</span>
                         </span>
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>JAVASCRIPT</span>
                         </span>
                     </div>
@@ -147,9 +147,9 @@
                         <p class="text-xs pt-1">Oct. 2025</p>
                         <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
@@ -163,9 +163,9 @@
                         <p class="text-xs pt-1">Oct. 2025</p>
                         <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
@@ -179,9 +179,9 @@
                         <p class="text-xs pt-1">Oct. 2025</p>
                         <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
@@ -195,9 +195,9 @@
                         <p class="text-xs pt-1">Oct. 2025</p>
                         <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
@@ -211,9 +211,9 @@
                         <p class="text-xs pt-1">Oct. 2025</p>
                         <p class="text-sm pt-3">Animation d'un ovni interférant avec la nature.</p>
                     </div>
-                    <div class="absolute flex bottom-0 p-3 space-x-2 font-black text-white">
-                        <span class="flex items-center space-x-2 px-3 py-2 bg-[rgba(13,13,13,0.7)] rounded-lg">
-                            <img src="images/croix.png" alt="Croix" class="w-3 h-3"> 
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(13,13,13,0.7)] rounded-lg text-xs sm:text-sm">
+                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
@@ -223,131 +223,131 @@
             <hr class="opacity-30">
 
             <!-- Compétences -->
-            <div class="flex items-center gap-8">
-                <h2 id="competences" class="text-5xl scroll-mt-23">MES COMPÉTENCES</h2>
-                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-5 h-5">
+            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+                <h2 id="competences" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">MES COMPÉTENCES</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
-            <div class="flex flex-row gap-20 font-black text-black justify-center w-full mx-auto">
+            <div class="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 font-black text-black justify-center w-full mx-auto">
 
                 <!-- Logiciels -->
-                <div class="space-y-6 w-1/2">
+                <div class="space-y-4 sm:space-y-6 w-full lg:w-1/2">
 
-                    <div class="flex items-center justify-center gap-4 px-2 mb-8">
-                        <img src="../images/croix.png" alt="Croix" class="w-4 h-4 opacity-40">
-                        <h3 class="text-2xl font-light text-white">Logiciels</h3>
+                    <div class="flex items-center justify-center gap-3 sm:gap-4 px-2 mb-6 sm:mb-8">
+                        <img src="../images/croix.png" alt="Croix" class="w-3 h-3 sm:w-4 sm:h-4 opacity-40">
+                        <h3 class="text-xl sm:text-2xl font-light text-white">Logiciels</h3>
                     </div>
 
-                    <div class="flex flex-wrap items-center justify-center gap-6">
+                    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                         
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Blender</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Blender</div>
                             <img src="images/competences/blender.png" alt="Blender" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe After Effects</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Adobe After Effects</div>
                             <img src="images/competences/aftereffects.png" alt="After Effects" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe Premiere Pro</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Adobe Premiere Pro</div>
                             <img src="images/competences/premierepro.png" alt="Premiere Pro" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe Photoshop</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Adobe Photoshop</div>
                             <img src="images/competences/photoshop.png" alt="Photoshop" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe Illustrator</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Adobe Illustrator</div>
                             <img src="images/competences/illustrator.png" alt="Illustrator" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe InDesign</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Adobe InDesign</div>
                             <img src="images/competences/indesign.png" alt="InDesign" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Adobe XD</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Adobe XD</div>
                             <img src="images/competences/xd.png" alt="Adobe XD" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Figma</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Figma</div>
                             <img src="images/competences/figma.png" alt="Figma" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Unity</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Unity</div>
                             <img src="images/competences/unity.png" alt="Unity" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                     </div>
                 </div>
 
                 <!-- Langages -->
-                <div class="space-y-6 w-1/2">
+                <div class="space-y-4 sm:space-y-6 w-full lg:w-1/2">
 
-                    <div class="flex items-center justify-center gap-4 px-2 mb-8">
-                        <img src="../images/croix.png" alt="Croix" class="w-4 h-4 opacity-40">
-                        <h3 class="text-2xl font-light text-white">Langages</h3>
+                    <div class="flex items-center justify-center gap-3 sm:gap-4 px-2 mb-6 sm:mb-8">
+                        <img src="../images/croix.png" alt="Croix" class="w-3 h-3 sm:w-4 sm:h-4 opacity-40">
+                        <h3 class="text-xl sm:text-2xl font-light text-white">Langages</h3>
                     </div>
 
-                    <div class="flex flex-wrap items-center justify-center gap-6">
+                    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                         
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Python</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Python</div>
                             <img src="images/competences/python.png" alt="Python" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">Java</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Java</div>
                             <img src="images/competences/java.png" alt="Java" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">HTML</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">HTML</div>
                             <img src="images/competences/html.png" alt="HTML" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">CSS</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">CSS</div>
                             <img src="images/competences/css.png" alt="CSS" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">JavaScript</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">JavaScript</div>
                             <img src="images/competences/javascript.png" alt="JavaScript" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">PHP</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">PHP</div>
                             <img src="images/competences/php.png" alt="PHP" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20">SQL</div>
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">SQL</div>
                             <img src="images/competences/sql.png" alt="SQL" 
-                            class="w-25 h-25 min-w-25 min-h-25 object-contain bg-[#242424] rounded-2xl p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                     </div>
                 </div>
@@ -356,16 +356,16 @@
             <hr class="opacity-30">
 
             <!-- À propos -->
-            <div class="flex items-center gap-8">
-                <h2 id="a-propos" class="text-5xl scroll-mt-23">À PROPOS</h2>
-                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-5 h-5">
+            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+                <h2 id="a-propos" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">À PROPOS</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
-            <div class="flex flex-row justify-center items-center gap-15">
-                <div class="w-[30%]">
-                    <img src="images/photo-profil.png" alt="Photo de profil" class="rounded-full w-50 h-50 mx-auto transition-transform duration-400 hover:scale-105">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-12 lg:gap-15">
+                <div class="w-full md:w-[30%] flex justify-center">
+                    <img src="images/photo-profil.png" alt="Photo de profil" class="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-50 lg:h-50 mx-auto transition-transform duration-400 hover:scale-105">
                 </div>
-                <div class="w-[70%] space-y-5 text-lg">
+                <div class="w-full md:w-[70%] space-y-4 sm:space-y-5 text-base sm:text-lg">
                     <div>
                         Bonjour ! Je suis un étudiant de 21 ans en 2ᵉ année de BUT MMI (Métiers du Multimédia et de l'Internet) spécialité développement web et dispositifs interactifs, 
                         et je développe mes compétences à travers des projets variés qui me motivent au quotidien.
@@ -382,13 +382,58 @@
         </div>
 
         <!-- Contact -->
-        <div data-include="html/contact.html" class="space-y-23 mt-23 mb-23 px-20"></div>
+        <div class="space-y-12 sm:space-y-16 lg:space-y-23 mt-12 sm:mt-16 lg:mt-23 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
+            <hr class="opacity-30">
+
+            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+                <h2 id="contact" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-25">ME CONTACTER</h2>
+                <img src="../../images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-15 gap-y-10 sm:gap-y-16 lg:gap-y-20">
+                <div class="w-full md:w-[35%]">
+                    <div class="text-center text-lg sm:text-xl">Retrouvez-moi avec :</div>
+                    <div class="flex justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-5 sm:mt-6 lg:mt-7">
+                        <a href="mailto:temi.kergastel@gmail.com" target="_blank" 
+                        class="bg-white rounded-full p-4 sm:p-5 group cursor-pointer relative overflow-hidden transition-transform duration-300 hover:scale-110">
+                            <span class="absolute inset-0 pointer-events-none
+                                before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#CC361D] 
+                                before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                            <img src="../../images/mail.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Mail">
+                        </a>
+                        <a href="https://www.linkedin.com/in/témi-kergastel-162205260" target="_blank" 
+                        class="bg-white rounded-full p-4 sm:p-5 group cursor-pointer relative overflow-hidden transition-transform duration-300 hover:scale-110">
+                            <span class="absolute inset-0 pointer-events-none
+                                before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#136BC2] 
+                                before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                            <img src="../../images/linkedin.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Linkedin">
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-[65%] space-y-4 sm:space-y-5 text-base sm:text-lg">
+                    <div>
+                    Je suis actuellement à la recherche d'un stage de mai 2026 à août 2026, 
+                    dans les secteurs de la 3D ou du développement.
+                    </div>
+                    <div>
+                    Si vous avez la moindre question, n'hésitez pas à me contacter par mail.
+                    </div>
+                    
+                    <a href="../../assets/CV_TemiKergastel.pdf" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center
+                    justify-center px-5 sm:px-6 lg:px-7 py-3 sm:py-4 lg:py-5 mt-3 bg-[#242424] text-white rounded-lg font_bold overflow-hidden group transition-transform duration-300 hover:-rotate-2 hover:scale-108 text-sm sm:text-base">
+                        <span class="z-0 absolute w-0 h-0 transition-all duration-300 ease-out rounded-full group-hover:w-70 group-hover:h-70 bg-gradient-to-t from-[#5D00C9] to-[#9E47FF]"></span>
+                        <img src="../../images/telecharger.png" alt="Télécharger" class="z-10 w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition duration-200 group-hover:brightness-0">
+                        <div class="z-10 transition duration-200 group-hover:brightness-0">Télécharger mon CV</div>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <hr class="opacity-30">
 
         <footer id="mentions-legales" class="b-0 bg-[#1A1A1A]" >
-            <div class="py-8 px-20 flex justify-between">
+            <div class="py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 text-sm sm:text-base">
                 
                 <div>© 2025 Témi Kergastel. Tous droits réservés.</div>
                 <a href="../html/mentions-legales.html" class="underline transition-opacity hover:opacity-75">Mentions Légales</a>

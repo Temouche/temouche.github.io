@@ -3,56 +3,56 @@
     <head>
         <title>Portfolio</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/style.css" media="all" rel="Stylesheet" type="text/css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="../../js/include.js"></script>
         <script src="../../js/scrollbar.js"></script>
     </head>
-    <body class="min-h-screen flex flex-col bg-[#0d0d0d] tracking-wide text-white">
+    <body class="bg-[#0d0d0d] tracking-wide text-white">
         <!-- Navbar (sans les flèches précédent/suivant) -->
-        <nav class="sticky top-0 h-18 py-5 px-10 bg-[#0d0d0d] flex items-center justify-between z-50">
+        <nav class="sticky top-0 h-14 sm:h-16 lg:h-18 py-3 sm:py-4 lg:py-5 px-4 sm:px-6 lg:px-10 bg-[#0d0d0d] flex items-center justify-between z-50">
             <!-- Bouton Fermer -->
             <a class="flex items-center transition-opacity hover:opacity-50 cursor-pointer" href="../../index.html">
-                <img src="../../images/croix-r.png" alt="Fermer" class="h-6 w-auto">
+                <img src="../../images/croix-r.png" alt="Fermer" class="h-5 w-auto sm:h-6">
             </a>
 
             <!-- Bouton Menu -->
-            <a class="flex items-center gap-4 hover:opacity-50 transition" href="../../index.html">
-                <img src="../../images/fleche-h.png" alt="Menu" class="h-6 w-auto">
+            <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 hover:opacity-50 transition text-sm sm:text-base" href="../../index.html">
+                <img src="../../images/fleche-h.png" alt="Menu" class="h-5 w-auto sm:h-6">
                 <span>Menu</span>
             </a>
         </nav>
 
-        <div class="w-full px-20 mt-10 mb-23 space-y-18">
-            <h2 class="text-6xl">MENTIONS LÉGALES</h2>
-            <div class="space-y-12">
+        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-20 mt-6 sm:mt-8 lg:mt-10 mb-12 sm:mb-16 lg:mb-23 space-y-10 sm:space-y-14 lg:space-y-18">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">MENTIONS LÉGALES</h2>
+            <div class="space-y-8 sm:space-y-10 lg:space-y-12">
                 <div>
-                    <h3 class="text-2xl mb-6 font-bold">Éditeur : Témi Kergastel</h3>
-                    <p>
+                    <h3 class="text-xl sm:text-2xl mb-4 sm:mb-5 lg:mb-6 font-bold">Éditeur : Témi Kergastel</h3>
+                    <p class="text-sm sm:text-base">
                         Ce site a été développé par moi-même avec les langages HTML, CSS, Tailwind CSS, et JavaScript.<br>
                         J'ai modélisé et animé le château derrière le menu de navigation sur Blender, pour ensuite exporter l'animation au format mp4.
                     </p>
                 </div>
                 <hr class="opacity-30">
                 <div>
-                    <h3 class="text-2xl mb-6 font-bold">Hébergeur :</h3>
-                    <div class="flex items-center gap-3 px-2 mb-2">
-                        <img src="../images/croix.png" alt="Croix" class="w-3 h-3 opacity-60">
+                    <h3 class="text-xl sm:text-2xl mb-4 sm:mb-5 lg:mb-6 font-bold">Hébergeur :</h3>
+                    <div class="flex items-center gap-2 sm:gap-3 px-2 mb-2 text-sm sm:text-base">
+                        <img src="../images/croix.png" alt="Croix" class="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-60">
                         <span>Alwaysdata</span>
                     </div>
-                    <div class="flex items-center gap-3 px-2 mb-2">
-                        <img src="../images/croix.png" alt="Croix" class="w-3 h-3 opacity-60">
+                    <div class="flex items-center gap-2 sm:gap-3 px-2 mb-2 text-sm sm:text-base">
+                        <img src="../images/croix.png" alt="Croix" class="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-60">
                         <span>91 rue du Faubourg Saint-Honoré, 75008 Paris, France</span>
                     </div>
-                    <div class="flex items-center gap-3 px-2 mb-2">
-                        <img src="../images/croix.png" alt="Croix" class="w-3 h-3 opacity-60">
+                    <div class="flex items-center gap-2 sm:gap-3 px-2 mb-2 text-sm sm:text-base">
+                        <img src="../images/croix.png" alt="Croix" class="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-60">
                         <span>01 84 16 23 40</span>
                     </div>
                 </div>
                 <hr class="opacity-30">
                 <div>
-                    <h3 class="text-2xl mb-6 font-bold">Propriété intellectuelle</h3>
-                    <p>
+                    <h3 class="text-xl sm:text-2xl mb-4 sm:mb-5 lg:mb-6 font-bold">Propriété intellectuelle</h3>
+                    <p class="text-sm sm:text-base">
                         Tous les contenus présents sur ce site (textes, images, vidéos, code, etc.) sont la Propriété
                         exclusive de Témi Kergastel, sauf mention contraire.<br>Toute reproduction est interdite sans autorisation.
                     </p>
@@ -64,7 +64,7 @@
         <hr class="opacity-30 mt-auto">
 
         <footer id="mentions-legales" class="b-0 bg-[#1A1A1A]">
-            <div class="py-8 px-20 flex justify-between">
+            <div class="py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 text-sm sm:text-base">
                 
                 <div>© 2025 Témi Kergastel. Tous droits réservés.</div>
                 <a href="mentions-legales.html" class="underline transition-opacity hover:opacity-75">Mentions Légales</a>

@@ -3,35 +3,59 @@
     <head>
         <title>Portfolio</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../../css/style.css" media="all" rel="Stylesheet" type="text/css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="../../js/include.js"></script>
         <script src="../../js/scrollbar.js"></script>
         <script src="../../js/projet.js"></script>
     </head>
-    <body class="min-h-screen flex flex-col bg-[#0d0d0d] tracking-wide text-white">
+    <body class="bg-[#0d0d0d] tracking-wide text-white">
         <!-- Navbar -->
-        <nav data-include="../navbar.html" class="sticky top-0 h-18 py-5 px-10 bg-[#0d0d0d] flex items-center justify-between z-50"></nav>
+        <nav class="sticky top-0 h-14 sm:h-16 lg:h-18 py-3 sm:py-4 lg:py-5 px-4 sm:px-6 lg:px-10 bg-[#0d0d0d] flex items-center justify-between z-50">
+            <!-- Bouton Fermer -->
+            <a class="flex items-center transition-opacity hover:opacity-50 cursor-pointer" href="../../index.html#projets">
+                <img src="../../images/croix-r.png" alt="Fermer" class="h-5 w-auto sm:h-6">
+            </a>
+
+            <!-- Boutons Précédent/Suivant -->
+            <div class="flex items-center gap-8 sm:gap-12 lg:gap-20">
+                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="">
+                    <img src="../../images/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
+                    <span class="hidden sm:inline">Précédent</span>  
+                </a>
+
+                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="">
+                    <span class="hidden sm:inline">Suivant</span>
+                    <img src="../../images/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
+                </a>
+            </div>
+
+            <!-- Bouton Menu -->
+            <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 hover:opacity-50 transition text-sm sm:text-base" href="../../index.html">
+                <img src="../../images/fleche-h.png" alt="Menu" class="h-5 w-auto sm:h-6">
+                <span>Menu</span>
+            </a>
+        </nav>
 
         <!-- Section Projet -->
-        <div class="w-full px-20 mt-10 space-y-13">
+        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-20 mt-6 sm:mt-8 lg:mt-10 space-y-8 sm:space-y-10 lg:space-y-13">
 
             <!-- Titre, date et outils -->
-            <div class="flex justify-between w-full">
-                <h2 class="text-6xl">CHÂTEAU ARDENT</h2>
-                <div class="text-right">
-                    <div class="text-base">Novembre 2025</div>
-                    <div class="text-xl font-black">Blender, Photoshop</div>
+            <div class="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">CHÂTEAU ARDENT</h2>
+                <div class="text-left sm:text-right">
+                    <div class="text-sm sm:text-base">Novembre 2025</div>
+                    <div class="text-base sm:text-lg lg:text-xl font-black">Blender, Photoshop</div>
                 </div>
             </div>
 
             <!-- Contenu -->
-            <div class="flex flex-row justify-between gap-20 w-full">
-                <div class="w-[60%] flex flex-col items-center relative">
+            <div class="flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 lg:gap-20 w-full">
+                <div class="w-full lg:w-[60%] flex flex-col items-center relative">
                     <div class="relative group w-full">
                         <!-- Flèche gauche -->
                         <img id="btn-prev" src="../../images/fleche-g.png" alt="Précédent"
-                            class="absolute top-1/2 left-2 -translate-y-1/2 w-8 h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
+                            class="absolute top-1/2 left-2 -translate-y-1/2 w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
 
                         <!-- Image principale -->
                         <img id="carrousel-main" src="../../images/projets/chateau.png" alt="Image principale"
@@ -39,41 +63,41 @@
 
                         <!-- Flèche droite -->
                         <img id="btn-next" src="../../images/fleche-d.png" alt="Suivant"
-                            class="absolute top-1/2 right-2 -translate-y-1/2 w-8 h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
+                            class="absolute top-1/2 right-2 -translate-y-1/2 w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
                     </div>
 
                     <!-- Miniatures -->
-                    <div id="carrousel-thumbs" class="flex justify-center gap-3 w-full">
-                        <img src="../../images/projets/chateau.png" alt="Miniature 1" class="w-30 h-20 object-cover cursor-pointer rounded-lg" data-full="../../images/projets/chateau.png">
-                        <img src="../../images/projets/preview.jpg" alt="Miniature 2" class="w-30 h-20 object-cover cursor-pointer rounded-lg" data-full="../../images/projets/preview.jpg">
-                        <img src="../../images/projets/preview.jpg" alt="Miniature 3" class="w-30 h-20 object-cover cursor-pointer rounded-lg" data-full="../../images/projets/preview.jpg">
+                    <div id="carrousel-thumbs" class="flex justify-center gap-2 sm:gap-3 w-full overflow-x-auto">
+                        <img src="../../images/projets/chateau.png" alt="Miniature 1" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../../images/projets/chateau.png">
+                        <img src="../../images/projets/preview.jpg" alt="Miniature 2" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../../images/projets/preview.jpg">
+                        <img src="../../images/projets/preview.jpg" alt="Miniature 3" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../../images/projets/preview.jpg">
                     </div>
                 </div>
 
-                <div class="w-[40%]">
-                    <h3 class="text-2xl font-bold mb-3">Contexte :</h3>
+                <div class="w-full lg:w-[40%]">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Contexte :</h3>
                     
-                    <div class="mb-10 text-lg">
+                    <div class="mb-6 sm:mb-8 lg:mb-10 text-base sm:text-lg">
                     Dans le cadre du cours de production 3D, nous devions modéliser un batîment sur Blender avec la contrainte de <strong>ne pas utiliser
                     le mode Edit</strong>, qui est normalement indispensable.
                     </div>
 
-                    <h3 class="text-2xl font-bold mb-3">Réalisation :</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Réalisation :</h3>
 
-                    <div class="text-lg">
+                    <div class="text-base sm:text-lg">
                     J'ai choisi de m'inspirer du château de <strong>Bowser</strong> dans l'univers de Mario.
                     Pour soustraire les objets entre eux, j'ai utilisé le <strong>modificateur booléan</strong>.
                     J'ai ensuite appliqué des couleurs, des textures et des lumières, ainsi qu'un sol et des douves de lave.
                     </div>
 
-                    <div class="mb-10 text-lg">
+                    <div class="mb-6 sm:mb-8 lg:mb-10 text-base sm:text-lg">
                     Afin de rendre le tout plus réaliste, j'ai modifié le rendu sur Photoshop, ce qui a donné <strong>une atmosphère
                     effrayante et un rendu cinématique</strong>.
                     </div>
 
-                    <h3 class="text-2xl font-bold mb-3">Conclusion :</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Conclusion :</h3>
 
-                    <div class="text-lg">
+                    <div class="text-base sm:text-lg">
                     Ne pas utiliser le mode Edit était très frustrant, mais cela a testé ma patience. 
                     Je suis fier du résultat que je trouve très esthétique.
                     </div>
@@ -91,13 +115,58 @@
         </div>
 
         <!-- Contact -->
-        <div data-include="../contact.html" class="space-y-23 mt-23 mb-23 px-20"></div>
+        <div class="space-y-12 sm:space-y-16 lg:space-y-23 mt-12 sm:mt-16 lg:mt-23 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
+            <hr class="opacity-30">
+
+            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+                <h2 id="contact" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-25">ME CONTACTER</h2>
+                <img src="../../images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-15 gap-y-10 sm:gap-y-16 lg:gap-y-20">
+                <div class="w-full md:w-[35%]">
+                    <div class="text-center text-lg sm:text-xl">Retrouvez-moi avec :</div>
+                    <div class="flex justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-5 sm:mt-6 lg:mt-7">
+                        <a href="mailto:temi.kergastel@gmail.com" target="_blank" 
+                        class="bg-white rounded-full p-4 sm:p-5 group cursor-pointer relative overflow-hidden transition-transform duration-300 hover:scale-110">
+                            <span class="absolute inset-0 pointer-events-none
+                                before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#CC361D] 
+                                before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                            <img src="../../images/mail.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Mail">
+                        </a>
+                        <a href="https://www.linkedin.com/in/témi-kergastel-162205260" target="_blank" 
+                        class="bg-white rounded-full p-4 sm:p-5 group cursor-pointer relative overflow-hidden transition-transform duration-300 hover:scale-110">
+                            <span class="absolute inset-0 pointer-events-none
+                                before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#136BC2] 
+                                before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                            <img src="../../images/linkedin.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Linkedin">
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-[65%] space-y-4 sm:space-y-5 text-base sm:text-lg">
+                    <div>
+                    Je suis actuellement à la recherche d'un stage de mai 2026 à août 2026, 
+                    dans les secteurs de la 3D ou du développement.
+                    </div>
+                    <div>
+                    Si vous avez la moindre question, n'hésitez pas à me contacter par mail.
+                    </div>
+                    
+                    <a href="../../assets/CV_TemiKergastel.pdf" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center
+                    justify-center px-5 sm:px-6 lg:px-7 py-3 sm:py-4 lg:py-5 mt-3 bg-[#242424] text-white rounded-lg font_bold overflow-hidden group transition-transform duration-300 hover:-rotate-2 hover:scale-108 text-sm sm:text-base">
+                        <span class="z-0 absolute w-0 h-0 transition-all duration-300 ease-out rounded-full group-hover:w-70 group-hover:h-70 bg-gradient-to-t from-[#5D00C9] to-[#9E47FF]"></span>
+                        <img src="../../images/telecharger.png" alt="Télécharger" class="z-10 w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition duration-200 group-hover:brightness-0">
+                        <div class="z-10 transition duration-200 group-hover:brightness-0">Télécharger mon CV</div>
+                    </a>
+                </div>
+            </div>
+        </div>
         
         <!-- Footer -->
         <hr class="opacity-30 mt-auto">
 
         <footer id="mentions-legales" class="b-0 bg-[#1A1A1A]" >
-            <div class="py-8 px-20 flex justify-between">
+            <div class="py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 text-sm sm:text-base">
                 
                 <div>© 2025 Témi Kergastel. Tous droits réservés.</div>
                 <a href="../mentions-legales.html" class="underline transition-opacity hover:opacity-75">Mentions Légales</a>
