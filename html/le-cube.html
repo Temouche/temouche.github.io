@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-        <link href="../css/style.css" media="all" rel="Stylesheet" type="text/css">
+        <link rel="stylesheet" href="../css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="../js/scrollbar.js"></script>
         <script src="../js/projet.js"></script>
@@ -20,12 +20,12 @@
 
             <!-- Boutons Précédent/Suivant -->
             <div class="flex items-center gap-8 sm:gap-12 lg:gap-20">
-                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="kinetic-typography.html">
+                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="chateau-ardent.html">
                     <img src="../images/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
                     <span class="hidden sm:inline">Précédent</span>  
                 </a>
 
-                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="chateau-ardent.html">
+                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="intervetion-extraterrestre.html">
                     <span class="hidden sm:inline">Suivant</span>
                     <img src="../images/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
                 </a>
@@ -51,9 +51,9 @@
             </div>
 
             <!-- Contenu -->
-            <div class="flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 lg:gap-20 w-full">
+            <div class="flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 lg:gap-20 max-w-full">
 
-                <div class="w-full lg:w-[60%] flex flex-col items-center relative">
+                <div class="w-full lg:w-[60%] flex flex-col items-center gap-3 relative">
                     <div class="relative group w-full">
                         <!-- Flèche gauche -->
                         <img id="btn-prev" src="../images/fleche-g.png" alt="Précédent"
@@ -70,11 +70,11 @@
 
                     <!-- Miniatures -->
                     <div id="carrousel-thumbs" class="flex justify-center gap-2 sm:gap-3 w-full">
-                        <img src="../images/projets/lecube1.png" alt="Miniature 1" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../images/projets/lecube1.png">
-                        <img src="../images/projets/lecube2.png" alt="Miniature 2" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../images/projets/lecube2.png">
-                        <img src="../images/projets/lecube3.png" alt="Miniature 3" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../images/projets/lecube3.png">
-                        <img src="../images/projets/lecube4.png" alt="Miniature 4" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../images/projets/lecube4.png">
-                        <img src="../images/projets/lecube5.png" alt="Miniature 5" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink-0" data-full="../images/projets/lecube5.png">
+                        <img src="../images/projets/lecube1.png" alt="Miniature 1" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/lecube1.png">
+                        <img src="../images/projets/lecube2.png" alt="Miniature 2" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/lecube2.png">
+                        <img src="../images/projets/lecube3.png" alt="Miniature 3" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/lecube3.png">
+                        <img src="../images/projets/lecube4.png" alt="Miniature 4" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/lecube4.png">
+                        <img src="../images/projets/lecube5.png" alt="Miniature 5" class="w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/lecube5.png">
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@
                     C’était très motivant de lier ma passion pour le cube à mes compétences en <strong>design et en montage</strong>, sur un projet qui me tient à cœur.
                     </div>
 
-                    <a href="https://mloks77.github.io/SAE302-LeCube/" target="_blank" class="mt-4 sm:mt-6 lg:mt-8 inline-block px-7 py-3 rounded-lg bg-[#242424] hover:bg-[#1A1A1A] font-bold text-base sm:text-lg transition-colors duration-200 shadow-md mt-4">
+                    <a href="https://mloks77.github.io/SAE302-LeCube/" target="_blank" class="mt-4 sm:mt-6 lg:mt-8 inline-block px-7 py-3 rounded-lg bg-[#242424] hover:bg-[#1A1A1A] font-bold text-base sm:text-lg transition-colors duration-200 shadow-md">
                         Voir le site
                     </a>
                 </div>
@@ -115,7 +115,7 @@
             <button id="lightbox-close" class="absolute top-6 right-6 z-60 cursor-pointer outline-none">
                 <img src="../images/croix.png" class="h-6 w-auto">
             </button>
-            <img id="lightbox-img" src="../images/projets/chateau.png" alt="Image agrandie"
+            <img id="lightbox-img" src="../images/projets/lecube1.png" alt="Image agrandie"
                 class="max-w-[90%] max-h-[90%] rounded-lg shadow-xl">
         </div>
 
@@ -133,18 +133,26 @@
                     <div class="text-center text-lg sm:text-xl">Retrouvez-moi avec :</div>
                     <div class="flex justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-5 sm:mt-6 lg:mt-7">
                         <a href="mailto:temi.kergastel@gmail.com" target="_blank" 
-                        class="bg-white rounded-full p-4 sm:p-5 group cursor-pointer relative overflow-hidden transition-transform duration-300 hover:scale-110">
-                            <span class="absolute inset-0 pointer-events-none
-                                before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#CC361D] 
-                                before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
-                            <img src="../images/mail.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Mail">
+                        class="group relative transition-transform duration-300 hover:scale-110 hover:z-30">
+                            <div class="bg-white rounded-full p-4 sm:p-5 relative overflow-hidden z-10">
+                                <span class="absolute inset-0 pointer-events-none
+                                    before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#CC361D] 
+                                    before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                                <img src="../images/mail.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Mail">
+                            </div>
+                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">temi.kergastel@gmail.com</div>
                         </a>
                         <a href="https://www.linkedin.com/in/témi-kergastel-162205260" target="_blank" 
-                        class="bg-white rounded-full p-4 sm:p-5 group cursor-pointer relative overflow-hidden transition-transform duration-300 hover:scale-110">
-                            <span class="absolute inset-0 pointer-events-none
-                                before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#136BC2] 
-                                before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
-                            <img src="../images/linkedin.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Linkedin">
+                        class="group relative transition-transform duration-300 hover:scale-110 hover:z-30">
+                            <div class="bg-white rounded-full p-4 sm:p-5 relative overflow-hidden z-10">
+                                <span class="absolute inset-0 pointer-events-none
+                                    before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#136BC2] 
+                                    before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                                <img src="../images/linkedin.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Linkedin">
+                            </div>
+                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">LinkedIn</div>
                         </a>
                     </div>
                 </div>
