@@ -9,6 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="js/scrollbar.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/filtre-projets.js"></script>
     </head>
     <body class="bg-[#0d0d0d] tracking-wide text-white">
 
@@ -38,7 +39,7 @@
         <!-- Menu (choix des pages) -->
         <div class="min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 lg:py-15 text-black">
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight">Témi Kergastel</h1>
-            <div class="text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl pt-2 font-bold">➙ 3D Artist</div>
+            <div class="text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl pt-2 font-bold">➙  Étudiant en multimédia • 3D Artist</div>
 
             <nav class="flex flex-col items-start space-y-4 sm:space-y-6 text-2xl sm:text-3xl lg:text-4xl pt-8 sm:pt-12 lg:pt-16">
                 <a href="#a-propos" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">À propos</a>
@@ -51,15 +52,15 @@
         <img src="images/remparts.png" alt="Remparts" class="absolute -z-5">
 
         <!-- Portfolio -->
-        <div class="space-y-12 sm:space-y-16 lg:space-y-23 mt-16 sm:mt-30 md:mt-36 lg:mt-54 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
-
+        <div class="mt-16 sm:mt-30 md:mt-36 lg:mt-54 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
+        
             <!-- À propos -->
             <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
                 <h2 id="a-propos" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">À PROPOS</h2>
                 <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-12 lg:gap-15">
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-12 lg:gap-15">
                 <div class="w-full md:w-[30%] flex justify-center">
                     <img src="images/photo-pro.png" alt="Photo de profil" class="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-50 lg:h-50 mx-auto transition-transform duration-400 hover:scale-105">
                 </div>
@@ -73,21 +74,21 @@
                         l'industrie du <strong>divertissement</strong>.
                     </div>
                     <div>
-                        Recherchant un <strong>stage</strong> de 2 à 4 mois entre mai et août 2026, je reste ouvert à toute opportunité 
+                        Recherchant un <strong>stage</strong> de 2 à 3 mois entre mai et août 2026, je reste ouvert à toute opportunité 
                         dans les domaine de l'informatique et du multimédia.
                     </div>
                 </div>
             </div>
 
-            <hr class="opacity-30">
+            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
 
             <!-- Compétences -->
-            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
                 <h2 id="competences" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">MES COMPÉTENCES</h2>
                 <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 font-bold text-black justify-center w-full mx-auto">
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 font-bold text-black justify-center w-full mx-auto">
 
                 <!-- Logiciels -->
                 <div class="space-y-4 sm:space-y-6 w-full lg:w-1/2">
@@ -218,128 +219,127 @@
                 </div>
             </div>
 
-            <hr class="opacity-30">
+            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
             
             <!-- Projets -->
-            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
                 <h2 id="projets" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">MES PROJETS</h2>
                 <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
+            </div>
+            <!-- Filtre catégories -->
+            <div class="mt-4 sm:mt-5 lg:mt-8 flex justify-end mb-6">
+                <div class="relative flex items-center">
+                        <div class="flex items-center gap-2">
+                            <img src="images/filtre.png" alt="Filtre" class="w-4 h-4 opacity-75">
+                            <label for="filtre-categorie" class="text-white text-xl font-bold px-2 mr-1">Filtre</label>
+                            <div class="relative">
+                                <select id="filtre-categorie" class="appearance-none pl-4 pr-8 py-2 bg-[#181818] text-white rounded-md  cursor-pointer">
+                                    <option value="tous">Tous les projets</option>
+                                    <option value="3d">3D</option>
+                                    <option value="motion">Motion design</option>
+                                    <option value="graphique">Design graphique</option>
+                                    <option value="tempsreel">Temps réel</option>
+                                    <option value="web">Site web</option>
+                                </select>
+                                <img src="images/fleche-b.png" alt="Flèche menu" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-60">
+                            </div>
+                        </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
 
-                <!-- Projet 1 -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/kinetic-typography.html">
-                    <img src="images/projets/kinetic.png" alt="Kinétic" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                <!-- Projet-->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/pause-cafe.html" data-categorie="3d">
+                    <img src="images/projets/donuts1.png" alt="Donuts" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
                     <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Kinetic Typography</h3>
-                        <p class="text-xs pt-1">Déc. 2025</p>
-                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Animation en motion design des paroles d'une musique.</p>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Pause Café</h3>
+                        <p class="text-sm pt-1">3D • Mars 2026</p>
                     </div>
                     <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
+                            <span>BLENDER</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/kinetic-typography.html" data-categorie="motion">
+                    <img src="images/projets/kinetic.png" alt="Kinétic" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Kinetic Typography</h3>
+                        <p class="text-sm pt-1">Motion design • Déc. 2025</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
                 </a>
 
-                <!-- Projet 2 -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/chateau-ardent.html">
+                <!-- Projet : 3D -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/chateau-ardent.html" data-categorie="3d">
                     <img src="images/projets/chateau1.png" alt="Château" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
                     <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
                         <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Château Ardent</h3>
-                        <p class="text-xs pt-1">Nov. 2025</p>
-                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Modélisation en 3D d'un château fort entouré de lave.</p>
+                        <p class="text-sm pt-1">3D • Nov. 2025</p>
                     </div>
                     <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>BLENDER</span>
                         </span>
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>PHOTOSHOP</span>
                         </span>
                     </div>
                 </a>
 
-                <!-- Projet 3 -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/le-cube.html">
+                <!-- Projet : Web -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/le-cube.html" data-categorie="web">
                     <img src="images/projets/lecube0.png" alt="Le Cube" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
                     <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
                         <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Le Cube</h3>
-                        <p class="text-xs pt-1">Nov. 2025</p>
-                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Webdocumentaire présentant le monde du speedcubing.</p>
+                        <p class="text-sm pt-1">Site web • Nov. 2025</p>
                     </div>
                     <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>HTML</span>
                         </span>
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>CSS</span>
                         </span>
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>JAVASCRIPT</span>
                         </span>
                     </div>
                 </a>
 
-                <!-- Projet 4 -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/intervetion-extraterrestre.html">
+                <!-- Projet : Motion Design -->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/intervetion-extraterrestre.html" data-categorie="motion">
                     <img src="images/projets/ovni.png" alt="Ovni" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
                     <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
                         <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Intervention Extraterrestre</h3>
-                        <p class="text-xs pt-1">Oct. 2025</p>
-                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Animation d'un ovni interférant avec la nature.</p>
+                        <p class="text-sm pt-1">Motion design • Oct. 2025</p>
                     </div>
                     <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>AFTER EFFECTS</span>
                         </span>
                     </div>
                 </a>
 
-
-                <!-- Projet 5 -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/decollage-cosmique.html">
-                    <img src="images/projets/cosmos1.png" alt="Cosmos" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
-                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Décollage Cosmique</h3>
-                        <p class="text-xs pt-1">Juil. 2025</p>
-                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Modélisation en 3D d'une fusée naviguant entre des planètes.</p>
-                    </div>
-                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
-                            <span>BLENDER</span>
-                        </span>
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
-                            <span>PHOTOSHOP</span>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projet 6 -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/japan-pop-culture.html">
+                <!-- Projet : Design Graphique-->
+                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/japan-pop-culture.html" data-categorie="graphique">
                     <img src="images/projets/magazine1.jpg" alt="Magazine" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
                     <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
                         <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Japan Pop Culture</h3>
-                        <p class="text-xs pt-1">Déc. 2024</p>
-                        <p class="text-xs sm:text-sm pt-2 sm:pt-3">Mise en page d'un magazine sur la culture du Japon.</p>
+                        <p class="text-sm pt-1">Design graphique • Déc. 2024</p>
                     </div>
                     <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3"> 
                             <span>INDESIGN</span>
                         </span>
                         <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <img src="images/croix.png" alt="Croix" class="w-2 h-2 sm:w-3 sm:h-3">
                             <span>PHOTOSHOP</span>
                         </span>
                     </div>
@@ -347,14 +347,14 @@
                
             </div>
             
-            <hr class="opacity-30">
+            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
 
-            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
                 <h2 id="contact" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-25">ME CONTACTER</h2>
                 <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
-            <div class="flex flex-col md:flex-row justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-15 gap-y-10 sm:gap-y-16 lg:gap-y-20">
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex flex-col md:flex-row justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-15 gap-y-10 sm:gap-y-16 lg:gap-y-20">
                 <div class="w-full md:w-[35%]">
                     <div class="text-center text-lg sm:text-xl">Retrouvez-moi avec :</div>
                     <div class="flex justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-5 sm:mt-6 lg:mt-7">
@@ -384,11 +384,11 @@
                 </div>
                 <div class="w-full md:w-[65%] space-y-4 sm:space-y-5 text-base sm:text-lg">
                     <div>
-                    Je suis actuellement à la recherche d'un <strong>stage</strong> de 2 à 4 mois entre mai et août 2026,
+                    Je suis actuellement à la recherche d'un <strong>stage</strong> de 2 à 3 mois entre mai et août 2026,
                     dans le domaine de la <strong>3D</strong> ou de la <strong>programmation</strong>.
                     </div>
                     <div>
-                    N'hésitez pas à me contacter par <strong><a href="mailto:temi.kergastel@gmail.com">mail</a></strong> pour tout renseignement.
+                    N'hésitez pas à me contacter par <strong><a href="mailto:temi.kergastel@gmail.com" target="_blank">mail</a></strong> pour tout renseignement.
                     </div>
                     
                     <a href="assets/CV - Témi Kergastel.pdf" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center
