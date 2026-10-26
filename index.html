@@ -7,80 +7,156 @@
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="js/scrollbar.js"></script>
-        <script src="js/index.js"></script>
         <script src="js/filtre-projets.js"></script>
     </head>
     <body class="bg-[#0d0d0d] tracking-wide text-white">
 
-        <!-- Château arrière-plan -->
-        <img src="images/chateau-placeholder-mobile.png" alt="Vidéo mobile" class="absolute top-0 left-0 w-full h-[105vh] object-cover pointer-events-none -z-15 lg:hidden">
-
-        <img src="images/chateau-placeholder.png" alt="Vidéo desktop" class="absolute top-0 left-0 w-full h-[110vh] object-cover pointer-events-none -z-15 hidden lg:block">
-
-        <video autoplay muted loop playsinline webkit-playsinline poster="images/chateau-placeholder-mobile.png" class="absolute top-0 left-0 w-full h-[105vh] object-cover pointer-events-none -z-10 lg:hidden">
-            <source src="videos/accueil-mobile.mp4" type="video/mp4">
-        </video>
-
-        <video autoplay muted loop playsinline webkit-playsinline poster="images/chateau-placeholder.png" class="absolute top-0 left-0 w-full h-[110vh] object-cover pointer-events-none -z-10 hidden lg:block">
-            <source src="videos/accueil.mp4" type="video/mp4">
-        </video>
-
-        <!-- Bouton Menu Flottant -->
-        <div id="menuFlottant" class="fixed top-3 right-3 sm:top-5 sm:right-5 opacity-0 pointer-events-none transition-opacity duration-200 z-30">
-            <a class="flex items-center gap-2 sm:gap-4 transition hover:bg-[#0d0d0d] bg-[#242424] px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-sm sm:text-base" href="#">
-                <img src="images/fleche-h.png" alt="Menu" class="h-5 w-auto sm:h-6">
-                <div>
-                    Menu
+        <!-- Navbar -->
+        <nav class="fixed top-0 left-0 z-50 w-full bg-[#141414]">
+            <div class="mx-auto flex items-center justify-between gap-16 py-4 px-4 sm:px-8 md:px-12 lg:px-20">
+                <a href="index.html" class="left-0">
+                    <img src="images/icons/accueil.png" alt="Accueil" class="h-6 w-6 object-contain cursor-pointer transition-scale hover:scale-110">
+                </a>
+                <div class="flex gap-10 right-0">
+                    <a href="#projets" class="text-lg font-bold cursor-pointer transition-scale hover:scale-110 duration-100">Projets</a>
+                    <a href="#skills" class="text-lg font-bold cursor-pointer transition-scale hover:scale-110 duration-100">Skills</a>
+                    <a href="#contact" class="text-lg font-bold cursor-pointer transition-scale hover:scale-110 duration-100">Contact</a>
                 </div>
-            </a>
-        </div>
-
-        <!-- Menu (choix des pages) -->
-        <div class="min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 lg:py-15 text-black">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight">Témi Kergastel</h1>
-            <div class="text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl pt-2 font-bold">➙  Étudiant en Multimédia</div>
-
-            <nav class="flex flex-col items-start space-y-4 sm:space-y-6 text-2xl sm:text-3xl lg:text-4xl pt-8 sm:pt-12 lg:pt-16">
-                <a href="#a-propos" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">À propos</a>
-                <a href="#competences" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Compétences</a>
-                <a href="#projets" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Projets</a>
-                <a href="#contact" class="inline-block transition duration-300 origin-left hover:translate-x-2 hover:scale-110">Contact</a>
-            </nav>
-        </div>
-
-        <img src="images/remparts.png" alt="Remparts" class="absolute -z-5">
+            </div>
+            <hr class="opacity-30">
+        </nav>
 
         <!-- Portfolio -->
-        <div class="mt-16 sm:mt-30 md:mt-36 lg:mt-54 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
+        <section class="mt-40 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
         
             <!-- À propos -->
-            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
-                <h2 id="a-propos" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">À PROPOS</h2>
-                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
-            </div>
+            <h2 id="a-propos" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">Témi Kergastel</h2>
 
-            <div class="mt-12 sm:mt-16 lg:mt-23 flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-12 lg:gap-15">
-                <div class="w-full md:w-[30%] flex justify-center">
-                    <img src="images/photo-portfolio.jpg" alt="Photo de profil" class="object-cover rounded-3xl w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-50 lg:h-50 mx-auto transition-transform duration-400 hover:scale-105">
-                </div>
+            <div class="mt-6 sm:mt-8 lg:mt-12 flex flex-col md:flex-row items-center gap-8 sm:gap-12 lg:gap-15">
                 <div class="w-full md:w-[70%] space-y-4 sm:space-y-5 text-base sm:text-lg">
                     <div>
-                        Étudiant de 21 ans en 2ᵉ année de <strong>BUT Métiers du Multimédia et de l'Internet</strong>,
-                        je me passionne pour le <strong>développement et la 3D</strong>
+                        Étudiant de 21 ans en 3ᵉ année de <strong>BUT Métiers du Multimédia et de l'Internet</strong>,
+                        je me passionne pour le <strong>développement et la 3D</strong>.
                     </div>
                     <div>
-                        Je recherche actuellement une <strong>alternance d'un an ou un stage de 3 mois</strong> pour l'année 2026-2027. N'hésitez pas
-                        à me contacter pour toute information.
+                        Je recherche actuellement une <strong>alternance d'un an ou un stage de 3 mois en avril</strong> pour l'année 2026-2027. N'hésitez pas
+                        à me <strong><a href="#contact">contacter</a></strong> pour toute information.
                     </div>
+                </div>
+                <div class="w-full md:w-[30%] flex justify-center">
+                    <img src="images/photo-portfolio.jpg" alt="Photo de profil" class="object-cover rounded-md w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-50 lg:h-50">
                 </div>
             </div>
 
             <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
-
-            <!-- Compétences -->
+            
+            <!-- Projets -->
             <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
-                <h2 id="competences" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">MES COMPÉTENCES</h2>
+                <h2 id="projets" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">Mes projets</h2>
+                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
+            </div>
+            <!-- Filtre catégories -->
+            <div class="mt-4 sm:mt-5 lg:mt-8 flex justify-end mb-6">
+                <div class="relative flex items-center">
+                        <div class="flex items-center gap-2">
+                            <img src="images/filtre.png" alt="Filtre" class="w-4 h-4 opacity-75">
+                            <label for="filtre-categorie" class="text-white text-xl font-bold px-2 mr-1">Filtrer</label>
+                            <div class="relative">
+                                <select id="filtre-categorie" class="appearance-none pl-4 pr-8 py-2 bg-[#181818] text-white rounded-md  cursor-pointer">
+                                    <option value="tous">Tous les projets</option>
+                                    <option value="3d">3D</option>
+                                    <option value="tempsreel">Temps réel</option>
+                                    <option value="web">Site web</option>
+                                </select>
+                                <img src="images/fleche-b.png" alt="Flèche menu" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-60">
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+
+                <!-- Projet-->
+                <a class="group relative overflow-hidden rounded-lg aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/ruelle-lugubre.html" data-categorie="3d">
+                    <img src="images/projets/ruelle.png" alt="Ruelle lugubre" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Ruelle lugubre</h3>
+                        <p class="text-sm pt-1">3D • Septembre 2026</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>BLENDER</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet-->
+                <a class="group relative overflow-hidden rounded-lg aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/agoraphobie.html" data-categorie="tempsreel">
+                    <img src="images/projets/agoraphobie.png" alt="Expérience VR" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Expérience VR</h3>
+                        <p class="text-sm pt-1">Temps réel • Avril 2026</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>UNITY</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet-->
+                <a class="group relative overflow-hidden rounded-lg aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/pause-cafe.html" data-categorie="3d">
+                    <img src="images/projets/donuts1.png" alt="Pause café" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Pause café</h3>
+                        <p class="text-sm pt-1">3D • Mars 2026</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>BLENDER</span>
+                        </span>
+                    </div>
+                </a>
+
+                <a class="group relative overflow-hidden rounded-lg aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/casse-briques.html" data-categorie="tempsreel">
+                    <img src="images/projets/casse-briques.png" alt="Casse-briques" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Casse-briques</h3>
+                        <p class="text-sm pt-1">Temps réel • Février 2026</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>UNREAL ENGINE</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Projet -->
+                <a class="group relative overflow-hidden rounded-lg aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/le-cube.html" data-categorie="web">
+                    <img src="images/projets/lecube0.png" alt="Le Cube" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
+                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Le cube</h3>
+                        <p class="text-sm pt-1">Site web • Novembre 2025</p>
+                    </div>
+                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>HTML</span>
+                        </span>
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>TAILWIND CSS</span>
+                        </span>
+                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
+                            <span>JAVASCRIPT</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
+
+            <!-- Skills -->
+            <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
+                <h2 id="skills" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">Mes skills</h2>
                 <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
@@ -208,115 +284,11 @@
                     </div>
                 </div>
             </div>
-
-            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
-            
-            <!-- Projets -->
-            <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
-                <h2 id="projets" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">MES PROJETS</h2>
-                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
-            </div>
-            <!-- Filtre catégories -->
-            <div class="mt-4 sm:mt-5 lg:mt-8 flex justify-end mb-6">
-                <div class="relative flex items-center">
-                        <div class="flex items-center gap-2">
-                            <img src="images/filtre.png" alt="Filtre" class="w-4 h-4 opacity-75">
-                            <label for="filtre-categorie" class="text-white text-xl font-bold px-2 mr-1">Filtre</label>
-                            <div class="relative">
-                                <select id="filtre-categorie" class="appearance-none pl-4 pr-8 py-2 bg-[#181818] text-white rounded-md  cursor-pointer">
-                                    <option value="tous">Tous les projets</option>
-                                    <option value="3d">3D</option>
-                                    <option value="tempsreel">Temps réel</option>
-                                    <option value="web">Site web</option>
-                                </select>
-                                <img src="images/fleche-b.png" alt="Flèche menu" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-60">
-                            </div>
-                        </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-
-                <!-- Projet-->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/ruelle-lugubre.html" data-categorie="3d">
-                    <img src="images/projets/ruelle.png" alt="Ruelle lugubre" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
-                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Ruelle lugubre</h3>
-                        <p class="text-sm pt-1">3D • Septembre 2026</p>
-                    </div>
-                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>BLENDER</span>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projet-->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/agoraphobie.html" data-categorie="tempsreel">
-                    <img src="images/projets/agoraphobie.png" alt="Expérience VR" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
-                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Expérience VR</h3>
-                        <p class="text-sm pt-1">Temps réel • Avril 2026</p>
-                    </div>
-                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>UNITY</span>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projet-->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/pause-cafe.html" data-categorie="3d">
-                    <img src="images/projets/donuts1.png" alt="Pause café" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
-                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Pause café</h3>
-                        <p class="text-sm pt-1">3D • Mars 2026</p>
-                    </div>
-                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>BLENDER</span>
-                        </span>
-                    </div>
-                </a>
-
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/casse-briques.html" data-categorie="tempsreel">
-                    <img src="images/projets/casse-briques.png" alt="Casse-briques" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
-                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Casse-briques</h3>
-                        <p class="text-sm pt-1">Temps réel • Février 2026</p>
-                    </div>
-                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>UNREAL ENGINE</span>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projet -->
-                <a class="group relative overflow-hidden rounded-2xl aspect-[5/3] border-[2px] border-white/0 transition-all duration-300 hover:border-white/100" href="html/le-cube.html" data-categorie="web">
-                    <img src="images/projets/lecube0.png" alt="Le Cube" class="top-0 left-0 w-full h-full object-cover transition duration-300 group-hover:scale-115 group-hover:opacity-70"/>
-                    <div class="absolute top-0 px-3 sm:px-4 lg:px-5 py-2 sm:py-3 lg:py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.7)]">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold">Le cube</h3>
-                        <p class="text-sm pt-1">Site web • Novembre 2025</p>
-                    </div>
-                    <div class="absolute flex bottom-0 p-2 sm:p-3 space-x-1 sm:space-x-2 font-black text-white flex-wrap">
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>HTML</span>
-                        </span>
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>TAILWIND CSS</span>
-                        </span>
-                        <span class="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-1 sm:py-2 bg-[rgba(0,0,0,0.7)] rounded-lg text-xs sm:text-sm">
-                            <span>JAVASCRIPT</span>
-                        </span>
-                    </div>
-                </a>
-            </div>
             
             <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
 
             <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
-                <h2 id="contact" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-25">ME CONTACTER</h2>
+                <h2 id="contact" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-25">Me contacter</h2>
                 <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
             </div>
 
@@ -376,12 +348,12 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
         
         <!-- Footer -->
         <hr class="opacity-30">
 
-        <footer id="mentions-legales" class="b-0 bg-[#1A1A1A]" >
+        <footer id="mentions-legales" class="b-0 bg-[#141414]" >
             <div class="py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 text-sm sm:text-base">
                 
                 <div>© 2026 Témi Kergastel.</div>
