@@ -4,21 +4,13 @@ body {
   padding: 0;
 }
 
-h1,h2,#help-toggle {
-  font-family: "Amarante";
-}
-
-nav {
-  font-family: "Manrope-Medium";
-}
-
-.gradient_blur {
-  filter: blur(10px);
+h1,h2 {
+  font-family: "Apollo";
 }
 
 @font-face {
-  font-family: "Amarante";
-  src: url("../fonts/Amarante-Regular.ttf");
+  font-family: "Apollo";
+  src: url("../fonts/APOLLO.otf");
 }
 
 @font-face {

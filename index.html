@@ -9,46 +9,82 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="js/filtre-projets.js"></script>
     </head>
-    <body class="bg-[#0d0d0d] tracking-wide text-white">
+    <body class="bg-[#0d0d0d] text-white text-lg">
 
         <!-- Navbar -->
         <nav class="fixed top-0 left-0 z-50 w-full bg-[#141414]">
             <div class="mx-auto flex items-center justify-between gap-16 py-4 px-4 sm:px-8 md:px-12 lg:px-20">
-                <a href="index.html" class="left-0">
-                    <img src="images/icons/accueil.png" alt="Accueil" class="h-6 w-6 object-contain cursor-pointer transition-scale hover:scale-110">
+                <a href="index.html#top" class="left-0">
+                    <img src="images/icons/accueil.png" alt="Accueil" class="h-6 w-6 cursor-pointer transition-scale hover:scale-110 duration-200">
                 </a>
                 <div class="flex gap-10 right-0">
-                    <a href="#projets" class="text-lg font-bold cursor-pointer transition-scale hover:scale-110 duration-100">Projets</a>
-                    <a href="#skills" class="text-lg font-bold cursor-pointer transition-scale hover:scale-110 duration-100">Skills</a>
-                    <a href="#contact" class="text-lg font-bold cursor-pointer transition-scale hover:scale-110 duration-100">Contact</a>
+                    <a href="#projets" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Projets</a>
+                    <a href="#skills" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Skills</a>
                 </div>
             </div>
-            <hr class="opacity-30">
+            <hr class="opacity-20">
         </nav>
 
         <!-- Portfolio -->
-        <section class="mt-40 mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
+        <section class="mb-12 sm:mb-16 lg:mb-23 px-4 sm:px-8 md:px-12 lg:px-20">
         
             <!-- À propos -->
-            <h2 id="a-propos" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23">Témi Kergastel</h2>
+            <div class="h-screen pt-15 flex flex-col justify-center">
+                <div class="flex flex-col md:flex-row justify-center gap-28 mb-">
+                    <div>
+                        <h1 id="a-propos" class="origin-top text-7xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-23 mb-20">Témi Kergastel</h1>
+                        <h2 class="text-3xl mb-6">Développeur & 3D Artist Junior</h2>
+                        <div class="mb-2">
+                            Étudiant en 3ᵉ année de <strong>BUT Métiers du Multimédia et de l'Internet</strong>,
+                            je me passionne pour le <strong>développement et la 3D</strong>.
+                        </div>
+                        <div class="mb-20">
+                            Je recherche actuellement une <strong>alternance d'un an ou un stage de 3 mois en avril</strong>, pour l'année 2026-2027. N'hésitez pas
+                            à me <strong><a href="mailto:temi.kergastel@gmail.com">contacter</a></strong> pour toute information.
+                        </div>
+                        <div class="flex flex-wrap gap-6 sm:gap-8 lg:gap-10">
+                            <!-- Mail -->
+                            <a href="mailto:temi.kergastel@gmail.com" target="_blank" class="group relative transition-transform duration-200 hover:scale-110 hover:z-30">
+                                <div class="bg-white rounded-full p-3 sm:p-3.5 relative overflow-hidden z-10">
+                                    <span class="absolute inset-0 pointer-events-none before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#CC361D] before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                                    <img src="images/icons/mail.png" class="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 transition duration-300 invert group-hover:invert-0" alt="Mail">
+                                </div>
+                                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">temi.kergastel@gmail.com</div>
+                            </a>
 
-            <div class="mt-6 sm:mt-8 lg:mt-12 flex flex-col md:flex-row items-center gap-8 sm:gap-12 lg:gap-15">
-                <div class="w-full md:w-[70%] space-y-4 sm:space-y-5 text-base sm:text-lg">
-                    <div>
-                        Étudiant de 21 ans en 3ᵉ année de <strong>BUT Métiers du Multimédia et de l'Internet</strong>,
-                        je me passionne pour le <strong>développement et la 3D</strong>.
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/t%C3%A9mi-kergastel/" target="_blank" class="group relative transition-transform duration-200 hover:scale-110 hover:z-30">
+                                <div class="bg-white rounded-full p-3 sm:p-3.5 relative overflow-hidden z-10">
+                                    <span class="absolute inset-0 pointer-events-none before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#136BC2] before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                                    <img src="images/icons/linkedin.png" class="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 transition duration-300 invert group-hover:invert-0" alt="Linkedin">
+                                </div>
+                                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">LinkedIn</div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/Temouche" target="_blank" class="group relative transition-transform duration-200 hover:scale-110 hover:z-30">
+                                <div class="bg-white rounded-full p-3 sm:p-3.5 relative overflow-hidden z-10">
+                                    <span class="absolute inset-0 pointer-events-none before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#525252] before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
+                                    <img src="images/icons/github.png" class="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 transition duration-300 invert group-hover:invert-0" alt="GitHub">
+                                </div>
+                                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">GitHub</div>
+                            </a>
+
+                            <!-- CV -->
+                            <a href="assets/CV_Temi_Kergastel.pdf" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center px-5 sm:px-6 lg:px-7 py-3 sm:py-4 lg:py-5 bg-[#242424] text-white rounded-lg font-bold overflow-hidden group transition-transform duration-200 hover:-rotate-2 hover:scale-108 text-sm sm:text-base">
+                                <span class="z-0 absolute w-0 h-0 transition-all duration-300 ease-out rounded-full group-hover:w-70 group-hover:h-70 bg-gradient-to-t from-[#5D00C9] to-[#9E47FF]"></span>
+                                <img src="images/icons/cv.png" alt="Télécharger" class="z-10 w-6 h-6 sm:w-7 sm:h-7 mr-2 sm:mr-3 transition duration-200 group-hover:brightness-0">
+                                <div class="z-10 transition duration-200 group-hover:brightness-0">Télécharger mon CV</div>
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        Je recherche actuellement une <strong>alternance d'un an ou un stage de 3 mois en avril</strong> pour l'année 2026-2027. N'hésitez pas
-                        à me <strong><a href="#contact">contacter</a></strong> pour toute information.
+                    <div class="max-w-sm flex-shrink-0">
+                        <img src="images/photo-portfolio.png" alt="Photo de profil" class="object-cover rounded-md">
                     </div>
-                </div>
-                <div class="w-full md:w-[30%] flex justify-center">
-                    <img src="images/photo-portfolio.jpg" alt="Photo de profil" class="object-cover rounded-md w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-50 lg:h-50">
                 </div>
             </div>
 
-            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
+            <hr class="opacity-20">
             
             <!-- Projets -->
             <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
@@ -152,7 +188,7 @@
                 </a>
             </div>
             
-            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
+            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-20">
 
             <!-- Skills -->
             <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
@@ -241,18 +277,6 @@
                         
                         <div class="relative group">
                             <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Python</div>
-                            <img src="images/competences/python.png" alt="Python" 
-                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
-                        </div>
-                        <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Java</div>
-                            <img src="images/competences/java.png" alt="Java" 
-                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
-                        </div>
-                        <div class="relative group">
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
                             opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">HTML</div>
                             <img src="images/competences/html.png" alt="HTML" 
                             class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
@@ -271,8 +295,8 @@
                         </div>
                         <div class="relative group">
                             <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">SQL</div>
-                            <img src="images/competences/sql.png" alt="SQL" 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">MySQL</div>
+                            <img src="images/competences/mysql.png" alt="MySQL" 
                             class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
                         <div class="relative group">
@@ -281,83 +305,44 @@
                             <img src="images/competences/php.png" alt="PHP" 
                             class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
                         </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Python</div>
+                            <img src="images/competences/python.png" alt="Python" 
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-[#FFFFFF] px-2 sm:px-3 py-1 rounded-lg text-center pointer-events-none transition-all duration-200 
+                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-top-3 w-max shadow-md/25 z-20 text-xs sm:text-sm">Java</div>
+                            <img src="images/competences/java.png" alt="Java" 
+                            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-25 lg:h-25 min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 lg:min-w-25 lg:min-h-25 object-contain bg-[#242424] rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-200 hover:bg-[#1A1A1A] hover:scale-110">
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <hr class="mt-12 sm:mt-16 lg:mt-23 opacity-30">
-
-            <div class="mt-12 sm:mt-16 lg:mt-23 flex items-center gap-4 sm:gap-6 lg:gap-8">
-                <h2 id="contact" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl scroll-mt-12 sm:scroll-mt-16 lg:scroll-mt-25">Me contacter</h2>
-                <img src="images/fleche-b.png" alt="Flèche" class="opacity-30 w-4 h-4 sm:w-5 sm:h-5">
-            </div>
-
-            <div class="mt-12 sm:mt-16 lg:mt-23 flex flex-col md:flex-row justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-15 gap-y-10 sm:gap-y-16 lg:gap-y-20">
-                <div class="w-full md:w-[35%]">
-                    <div class="text-center text-lg sm:text-xl">Retrouvez-moi avec :</div>
-                    <div class="flex justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-5 sm:mt-6 lg:mt-7">
-                        <a href="mailto:temi.kergastel@gmail.com" target="_blank" 
-                        class="group relative transition-transform duration-300 hover:scale-110 hover:z-30">
-                            <div class="bg-white rounded-full p-4 sm:p-5 relative overflow-hidden z-10">
-                                <span class="absolute inset-0 pointer-events-none
-                                    before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#CC361D] 
-                                    before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
-                                <img src="images/mail.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Mail">
-                            </div>
-                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">temi.kergastel@gmail.com</div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/témi-kergastel-162205260" target="_blank" 
-                        class="group relative transition-transform duration-300 hover:scale-110 hover:z-30">
-                            <div class="bg-white rounded-full p-4 sm:p-5 relative overflow-hidden z-10">
-                                <span class="absolute inset-0 pointer-events-none
-                                    before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#136BC2] 
-                                    before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
-                                <img src="images/linkedin.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Linkedin">
-                            </div>
-                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">LinkedIn</div>
-                        </a>
-                        <a href="https://github.com/Temouche" target="_blank" 
-                        class="group relative transition-transform duration-300 hover:scale-110 hover:z-30">
-                            <div class="bg-white rounded-full p-4 sm:p-5 relative overflow-hidden z-10">
-                                <span class="absolute inset-0 pointer-events-none
-                                    before:absolute before:bottom-[-100%] before:right-[-100%] before:w-[220%] before:h-[220%] before:rounded-full before:bg-[#525252] 
-                                    before:scale-0 group-hover:before:scale-100 before:transition-transform before:duration-400 before:ease-out"></span>
-                                <img src="images/github.png" class="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 transition duration-300 group-hover:invert" alt="Linkedin">
-                            </div>
-                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#282828] px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-center transition-all duration-200 
-                            opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:-bottom-6 w-max shadow-md/25 z-20 text-xs">GitHub</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full md:w-[65%] space-y-4 sm:space-y-5 text-base sm:text-lg">
-                    <div>
-                    Je suis actuellement à la recherche d'une <strong>alternance d'un an ou d'un stage de 3 mois</strong> pour l'année 2026-2027, en
-                    <strong>développement web</strong> ou <strong>expériences interactives</strong>.
-                    </div>
-                    <div>
-                    N'hésitez pas à me contacter par <strong><a href="mailto:temi.kergastel@gmail.com" target="_blank">mail</a></strong> pour tout renseignement.
-                    </div>
-                    
-                    <a href="assets/CV_Temi_Kergastel.pdf" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center
-                    justify-center px-5 sm:px-6 lg:px-7 py-3 sm:py-4 lg:py-5 mt-3 bg-[#242424] text-white rounded-lg font_bold overflow-hidden group transition-transform duration-300 hover:-rotate-2 hover:scale-108 text-sm sm:text-base">
-                        <span class="z-0 absolute w-0 h-0 transition-all duration-300 ease-out rounded-full group-hover:w-70 group-hover:h-70 bg-gradient-to-t from-[#5D00C9] to-[#9E47FF]"></span>
-                        <img src="images/telecharger.png" alt="Télécharger" class="z-10 w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 transition duration-200 group-hover:brightness-0">
-                        <div class="z-10 transition duration-200 group-hover:brightness-0">Télécharger mon CV</div>
-                    </a>
                 </div>
             </div>
         </section>
         
         <!-- Footer -->
-        <hr class="opacity-30">
+        <hr class="opacity-20">
+        <footer class="b-0 bg-[#141414] py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between items-center sm:gap-0 text-sm sm:text-base" >
+            <div>© 2026 Témi Kergastel.</div>
 
-        <footer id="mentions-legales" class="b-0 bg-[#141414]" >
-            <div class="py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 text-sm sm:text-base">
-                
-                <div>© 2026 Témi Kergastel.</div>
-                <a href="html/mentions-legales.html" class="underline transition-opacity hover:opacity-75">Mentions Légales</a>
+            <div class="flex flex-row gap-8 items-center">
+                <a class="mr-8">
+                    Contactez-moi !
+                </a>
+                <a href="mailto:temi.kergastel" target="_blank" class="duration-200 hover:scale-110">
+                    <img src="images/icons/mail.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                </a>
+                <a href="https://linkedin.com/in/t%C3%A9mi-kergastel/" target="_blank" class="duration-200 hover:scale-110">
+                    <img src="images/icons/linkedin.png" class="transition-transform w-8 h-8">
+                </a>
+                <a href="https://github.com/Temouche" target="_blank" class="duration-200 hover:scale-110">
+                    <img src="images/icons/github.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                </a>
+                <a href="assets/CV_Temi_Kergastel.pdf" target="_blank" class="duration-200 hover:scale-110">
+                    <img src="images/icons/cv.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                </a>
             </div>
         </footer>
     </body>
