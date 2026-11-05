@@ -7,39 +7,26 @@
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="../js/scrollbar.js"></script>
         <script src="../js/projet.js"></script>
     </head>
-    <body class="bg-[#0d0d0d] tracking-wide text-white">
+    <body class="bg-[#0d0d0d] text-white">
+
         <!-- Navbar -->
-        <nav class="sticky top-0 h-14 sm:h-16 lg:h-18 py-3 sm:py-4 lg:py-5 px-4 sm:px-6 lg:px-10 bg-[#0d0d0d] flex items-center justify-between z-50">
-            <!-- Bouton Fermer -->
-            <a class="flex items-center transition-opacity hover:opacity-50 cursor-pointer" href="../index.html#projets">
-                <img src="../images/croix-r.png" alt="Fermer" class="h-5 w-auto sm:h-6">
-            </a>
-
-            <!-- Boutons Précédent/Suivant -->
-            <div class="flex items-center gap-8 sm:gap-12 lg:gap-20">
-                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="agoraphobie.html">
-                    <img src="../images/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
-                    <span class="hidden sm:inline">Précédent</span>  
+        <nav class="fixed top-0 left-0 z-50 w-full bg-[#141414]">
+            <div class="flex items-center justify-between py-4 px-20">
+                <a href="../index.html#top" class="left-0">
+                    <img src="../images/icons/accueil.png" alt="Accueil" class="h-6 w-6 cursor-pointer transition-scale hover:scale-110 duration-200">
                 </a>
-
-                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="casse-briques.html">
-                    <span class="hidden sm:inline">Suivant</span>
-                    <img src="../images/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
-                </a>
+                <div class="flex gap-10 right-0">
+                    <a href="../index.html#projets" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Projets</a>
+                    <a href="../index.html#skills" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Skills</a>
+                </div>
             </div>
-
-            <!-- Bouton Menu -->
-            <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 hover:opacity-50 transition text-sm sm:text-base" href="../index.html">
-                <img src="../images/fleche-h.png" alt="Menu" class="h-5 w-auto sm:h-6">
-                <span>Menu</span>
-            </a>
+            <hr class="opacity-20">
         </nav>
 
         <!-- Section Projet -->
-        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-20 mt-6 sm:mt-8 lg:mt-10 space-y-8 sm:space-y-10 lg:space-y-13">
+        <section class="mt-30 w-full px-20 space-y-13">
 
             <!-- Titre, date et outils -->
             <div class="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
@@ -51,12 +38,12 @@
             </div>
 
             <!-- Contenu -->
-            <div class="flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 lg:gap-20 w-full">
+            <div class="flex flex-row justify-between gap-20 w-full">
 
-                <div class="w-full lg:w-[60%] flex flex-col items-center gap-3 relative">
+                <div class="w-[50%] flex flex-col items-center gap-3 relative">
                     <div class="relative group w-full">
                         <!-- Flèche gauche -->
-                        <img id="btn-prev" src="../images/fleche-g.png" alt="Précédent"
+                        <img id="btn-prev" src="../images/icons/fleche-g.png" alt="Précédent"
                             class="absolute top-1/2 left-2 -translate-y-1/2 w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
 
                         <!-- Image principale -->
@@ -64,7 +51,7 @@
                             class="w-full h-auto object-contain mb-3 rounded-lg aspect-video cursor-zoom-in select-none" role="button" aria-label="Ouvrir l'image en grand">
 
                         <!-- Flèche droite -->
-                        <img id="btn-next" src="../images/fleche-d.png" alt="Suivant"
+                        <img id="btn-next" src="../images/icons/fleche-d.png" alt="Suivant"
                             class="absolute top-1/2 right-2 -translate-y-1/2 w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 cursor-pointer opacity-20 transition-all hover:scale-110 hover:opacity-100 z-10">
                     </div>
 
@@ -72,69 +59,67 @@
                     <div id="carrousel-thumbs" class="flex justify-center gap-2 sm:gap-3 w-full">
                         <img src="../images/projets/donuts1.png" alt="Miniature 1" class="opacity-60 w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/donuts1.png">
                         <img src="../images/projets/donuts2.png" alt="Miniature 2" class="opacity-60 w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/donuts2.png">
-                        <img src="../images/projets/donuts3.png" alt="Miniature 3" class="opacity-60 w-20 h-14 sm:w-24 sm:h-16 lg:w-30 lg:h-20 object-cover cursor-pointer rounded-lg flex-shrink min-w-0" data-full="../images/projets/donuts3.png">
                     </div>
                 </div>
 
-                <div class="w-full lg:w-[40%]">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Contexte :</h3>
-                    
-                    <div class="mb-6 sm:mb-8 lg:mb-10 ">
-                    J’ai choisi de suivre le célèbre tutoriel du <strong>donut</strong>, avec l'objectif d'approfondir mes connaissances du <strong>workflow</strong> de Blender, tout en ajoutant une <strong>touche personnelle</strong>.
+                <div class="w-[50%] flex flex-col gap-6">
+                    <div>
+                        Dans l'objectif de renforcer ma maîtrise de Blender, j'ai choisi de suivre le fameux tutoriel du <strong>donut</strong> de Blender Guru, tout en ajoutant ma <strong>touche personnelle</strong>.
                     </div>
-
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Réalisation :</h3>
-
-                    <div class="">
-                    Ce travail de plusieurs jours m'a confronté à des <strong>défis techniques</strong> stimulants, surmontés à l'aide de la communauté Discord.
+                    <div>
+                        Afin d'ajouter une <strong>serviette</strong>, je l'ai d'abord modélisé à la main, et me suis ensuite tourné vers une <strong>simulation physique</strong> pour un bien meilleur rendu et un pliage naturel.
+                        La simulation m'a posé problème car le modèle se contractait sur lui-même ; cela était dû à <strong>l'échelle de la scène</strong> trop réduite. Après l'avoir agrandie, j'ai fais un <storng>bake</storng> du modèle puis l'ai inséré.
+                        J'ai choisi et modifié la plupart des <strong>textures</strong> sur l'add-on BlenderKit, comme pour la nappe et la tasse.
                     </div>
-
-                    <div class="mb-6 sm:mb-8 lg:mb-10 ">
-                    Le plus gros défi a été d’ajouter une <strong>serviette</strong> à la scène : j’ai commencé par la modéliser à la main, mais je me suis tourné 
-                    vers une <strong>simulation physique</strong> pour un meilleur rendu et un pliage naturel. Lors de la simulation, elle se contractait sur 
-                    elle-même à cause de l'<strong>échelle trop réduite</strong> de la scène. J'ai dû l’agrandir pour réaliser la simulation et le bake, puis 
-                    la réduire à sa taille initiale.
-                    </div>
-                    
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Conclusion :</h3>
-
-                    <div class="">
-                    Ce projet m'a permis d'explorer tout le <strong>pipeline</strong> : modélisation, sculpting, shading, UV editing, physique, et même animation pour la serviette et le café. 
-                    J’en suis fier et cela me donne hâte de continuer.
+                    <div>
+                        Ce travail m'a confronté à de <strong>nombreux défis techniques</strong>, dont certains surmontés à l'aide de serveurs Discord. Cela m'a permis d'explorer chaque partie d'un projet 3D, comme le <strong>sculpting, le shading et l'UV editing</strong>.
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Boutons Précédent/Suivant -->
+            <section class="bg-[#0d0d0d] flex items-center justify-between">
+                <a class="flex items-center gap-4 transition-opacity hover:opacity-50" href="agoraphobie.html">
+                    <img src="../images/icons/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
+                    <span class="hidden sm:inline">Projet précédent</span>
+                </a>
+
+                <a class="flex items-center gap-4 transition-opacity hover:opacity-50" href="casse-briques.html">
+                    <span class="hidden sm:inline">Projet suivant</span>
+                    <img src="../images/icons/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
+                    </a>
+            </section>
+        </section>
 
         <!-- Lightbox (JS) -->
         <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
             <button id="lightbox-close" class="absolute top-6 right-6 z-60 cursor-pointer outline-none">
-                <img src="../images/croix.png" alt="Croix" class="h-6 w-auto">
+                <img src="../images/icons/croix.png" alt="Croix" class="h-6 w-auto">
             </button>
             <img id="lightbox-img" src="../images/projets/donuts1.png" alt="Image agrandie"
                 class="max-w-[90%] max-h-[90%] rounded-lg shadow-xl">
         </div>
 
         <!-- Footer -->
-        <hr class="opacity-20">
+        <hr class="opacity-20 mt-16">
         <footer class="b-0 bg-[#141414] py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between items-center sm:gap-0 text-sm sm:text-base" >
-            <div>© 2026 Témi Kergastel.</div>
+            <div class="opacity-50">© 2026 Témi Kergastel.</div>
 
-            <div class="flex flex-row gap-8 items-center">
+            <div class="flex flex-row gap-6 items-center">
                 <a class="mr-8">
                     Contactez-moi !
                 </a>
-                <a href="mailto:temi.kergastel" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/mail.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                <a href="mailto:temi.kergastel@gmail.com" target="_blank">
+                    <img src="../images/icons/mail.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
-                <a href="https://linkedin.com/in/t%C3%A9mi-kergastel/" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/linkedin.png" class="transition-transform w-8 h-8">
+                <a href="https://linkedin.com/in/témi-kergastel/" target="_blank">
+                    <img src="../images/icons/linkedin.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
-                <a href="https://github.com/Temouche" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/github.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                <a href="https://github.com/Temouche" target="_blank">
+                    <img src="../images/icons/github.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
-                <a href="assets/CV_Temi_Kergastel.pdf" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/cv.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                <a href="../assets/CV_Témi_Kergastel.pdf" target="_blank">
+                    <img src="../images/icons/cv.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
             </div>
         </footer>

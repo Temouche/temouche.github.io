@@ -7,43 +7,29 @@
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="../js/scrollbar.js"></script>
         <script src="../js/projet.js"></script>
     </head>
-    <body class="bg-[#0d0d0d] tracking-wide text-white">
+    <body class="bg-[#0d0d0d] text-white">
         <!-- Navbar -->
-        <nav class="sticky top-0 h-14 sm:h-16 lg:h-18 py-3 sm:py-4 lg:py-5 px-4 sm:px-6 lg:px-10 bg-[#0d0d0d] flex items-center justify-between z-50">
-            <!-- Bouton Fermer -->
-            <a class="flex items-center transition-opacity hover:opacity-50 cursor-pointer" href="../index.html#projets">
-                <img src="../images/croix-r.png" alt="Fermer" class="h-5 w-auto sm:h-6">
-            </a>
-
-            <!-- Boutons Précédent/Suivant -->
-            <div class="flex items-center gap-8 sm:gap-12 lg:gap-20">
-                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="impasse-lugubre.html">
-                    <img src="../images/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
-                    <span class="hidden sm:inline">Précédent</span>  
+        <nav class="fixed top-0 left-0 z-50 w-full bg-[#141414]">
+            <div class="flex items-center justify-between py-4 px-20">
+                <a href="../index.html#top" class="left-0">
+                    <img src="../images/icons/accueil.png" alt="Accueil" class="h-6 w-6 cursor-pointer transition-scale hover:scale-110 duration-200">
                 </a>
-
-                <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 transition-opacity hover:opacity-50 text-sm sm:text-base" href="pause-cafe.html">
-                    <span class="hidden sm:inline">Suivant</span>
-                    <img src="../images/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
-                </a>
+                <div class="flex gap-10 right-0">
+                    <a href="../index.html#projets" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Projets</a>
+                    <a href="../index.html#skills" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Skills</a>
+                </div>
             </div>
-
-            <!-- Bouton Menu -->
-            <a class="flex items-center gap-2 sm:gap-3 lg:gap-4 hover:opacity-50 transition text-sm sm:text-base" href="../index.html">
-                <img src="../images/fleche-h.png" alt="Menu" class="h-5 w-auto sm:h-6">
-                <span>Menu</span>
-            </a>
+            <hr class="opacity-20">
         </nav>
 
         <!-- Section Projet -->
-        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-20 mt-6 sm:mt-8 lg:mt-10 space-y-8 sm:space-y-10 lg:space-y-13">
+        <section class="mt-30 w-full px-20 space-y-13">
 
             <!-- Titre, date et outils -->
             <div class="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Agoraphobie (VR)</h2>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Expérience VR</h2>
                 <div class="text-left sm:text-right">
                     <div class="text-sm sm:text-base">Avril 2026</div>
                     <div class=" lg:text-xl font-black">Unity</div>
@@ -51,9 +37,9 @@
             </div>
 
             <!-- Contenu -->
-            <div class="flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 lg:gap-20 w-full">
+            <div class="flex flex-row justify-between gap-20 w-full">
 
-                <div class="w-full lg:w-[60%] relative">
+                <div class="w-[50%] relative">
                     <div class="w-full aspect-video mb-3 rounded-lg overflow-hidden bg-black">
                         <iframe 
                             src="https://www.youtube.com/embed/ApbGtTI4Pgk"
@@ -66,51 +52,55 @@
                     </div>
                 </div>
 
-                <div class="w-full lg:w-[40%]">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Contexte :</h3>
-
-                    <div class="mb-6 sm:mb-8 lg:mb-10 ">
-                        Dans le cadre du cours de réalité virtuelle, l'objectif était de créer une <strong>expérience immersive sensibilisant à une phobie</strong> de notre choix.
-                        Mon coéquipier et moi avons choisi l'agoraphobie, la peur de se retrouver dans des situations ou des lieux dont il est <strong>difficile de s'échapper</strong>.
+                <div class="w-[50%] flex flex-col gap-6">
+                    <div>
+                        Ce projet de réalité virtuelle a été réalisé en binôme dans le but de sensibiliser à <strong>l'agoraphobie</strong>, la peur de se retrouver dans des situations dont il est <strong>difficile de s'échapper</strong>.
                     </div>
-
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Réalisation :</h3>
-
-                    <div class="mb-6 sm:mb-8 lg:mb-10 ">
-                        Le joueur doit trouver et activer cinq <strong>interrupteurs</strong> afin de pouvoir quitter une <strong>rame de métro angoissante</strong> qui devient progressivement de plus en plus bondée.<br>
-                        Pour simuler le <strong>déplacement</strong> du métro sans déplacer réellement le train, nous avons utilisé un système de <strong>lumières</strong> et d'éléments en mouvement à l'extérieur des fenêtres.<br>
-                        Nous avons également adapté l'application VR au casque <strong>Meta Quest 3</strong>, ce qui nous a amenés à nous familiariser avec les contraintes et le déploiement en réalité virtuelle.
+                    <div>
+                        Le joueur doit trouver et activer cinq <strong>interrupteurs</strong> afin de pouvoir quitter une <strong>rame de métro angoissante</strong> qui devient progressivement de plus en plus bondée.
+                        Pour simuler le <strong>déplacement</strong> du métro sans déplacer réellement le train, nous avons mis en place des <strong>lumières</strong> et des éléments en mouvement à l'extérieur des fenêtres.
+                        L'adaptation et l'export de l'application vers le casque <strong>Meta Quest 3</strong> ont posé beaucoup de problèmes, que nous avons surmonté en travaillant en équipe.
                     </div>
-
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Conclusion :</h3>
-
-                    <div class="">
-                        Ce projet m'a permis de découvrir le <strong>développement en réalité virtuelle</strong> et d'acquérir une première expérience sur casque VR.
+                    <div>
+                        Au final, le développement de cette application m'a permis de découvrir et de me familiariser avec l'environnement XR d'Unity et ses contraites.
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Boutons Précédent/Suivant -->
+            <section class="bg-[#0d0d0d] flex items-center justify-between">
+                <a class="flex items-center gap-4 transition-opacity hover:opacity-50" href="ruelle-lugubre.html">
+                    <img src="../images/icons/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
+                    <span class="hidden sm:inline">Projet précédent</span>
+                </a>
+
+                <a class="flex items-center gap-4 transition-opacity hover:opacity-50" href="pause-cafe.html">
+                    <span class="hidden sm:inline">Projet suivant</span>
+                    <img src="../images/icons/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
+                    </a>
+            </section>
+        </section>
 
         <!-- Footer -->
-        <hr class="opacity-20">
+        <hr class="opacity-20 mt-16">
         <footer class="b-0 bg-[#141414] py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between items-center sm:gap-0 text-sm sm:text-base" >
-            <div>© 2026 Témi Kergastel.</div>
+            <div class="opacity-50">© 2026 Témi Kergastel.</div>
 
-            <div class="flex flex-row gap-8 items-center">
+            <div class="flex flex-row gap-6 items-center">
                 <a class="mr-8">
                     Contactez-moi !
                 </a>
-                <a href="mailto:temi.kergastel" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/mail.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                <a href="mailto:temi.kergastel@gmail.com" target="_blank">
+                    <img src="../images/icons/mail.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
-                <a href="https://linkedin.com/in/t%C3%A9mi-kergastel/" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/linkedin.png" class="transition-transform w-8 h-8">
+                <a href="https://linkedin.com/in/témi-kergastel/" target="_blank">
+                    <img src="../images/icons/linkedin.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
-                <a href="https://github.com/Temouche" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/github.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                <a href="https://github.com/Temouche" target="_blank">
+                    <img src="../images/icons/github.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
-                <a href="assets/CV_Temi_Kergastel.pdf" target="_blank" class="duration-200 hover:scale-110">
-                    <img src="images/icons/cv.png" class="transition-transform duration-200 hover:scale-110 w-8 h-8">
+                <a href="../assets/CV_Témi_Kergastel.pdf" target="_blank">
+                    <img src="../images/icons/cv.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
             </div>
         </footer>
