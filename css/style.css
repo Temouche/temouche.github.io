@@ -15,10 +15,5 @@ h1,h2 {
 
 @font-face {
   font-family: "Manrope-Regular";
-  src: url("../fonts/manrope/Manrope-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Manrope-Medium";
-  src: url("../fonts/manrope/Manrope-Medium.ttf");
+  src: url("../assets/manrope/Manrope-Regular.ttf");
 }
