@@ -8,18 +8,19 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="../js/projet.js"></script>
 
-        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="icon" type="image/webp" href="../favicon/favicon-96x96.webp" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+        <link rel="shortcut icon" href="../favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.webp" />
+        <meta name="apple-mobile-web-app-title" content="Témi K" />
+        <link rel="manifest" href="../favicon/site.webmanifest" />
     </head>
     <body class="bg-[#0d0d0d] text-white">
         <!-- Navbar -->
         <nav class="fixed top-0 left-0 z-50 w-full bg-[#141414]">
             <div class="flex items-center justify-between py-4 px-20">
                 <a href="../index.html#top" class="left-0">
-                    <img src="../images/icons/accueil.png" alt="Accueil" class="h-6 w-6 cursor-pointer transition-scale hover:scale-110 duration-200">
+                    <img src="../images/icons/accueil.webp" alt="Accueil" class="h-6 w-6 cursor-pointer transition-scale hover:scale-110 duration-200">
                 </a>
                 <div class="flex gap-10 right-0">
                     <a href="../index.html#projets" class="text-lg cursor-pointer transition-scale hover:scale-110 duration-200">Projets</a>
@@ -30,65 +31,113 @@
         </nav>
 
         <!-- Section Projet -->
-        <section class="mt-30 w-full px-20 space-y-13">
-
-            <!-- Titre, date et outils -->
-            <div class="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Casse-briques</h2>
-                <div class="text-left sm:text-right">
-                    <div class="text-sm sm:text-base">Février 2026</div>
-                    <div class=" lg:text-xl font-black">Unreal Engine</div>
+        <section class="mt-30 w-full px-50">
+            <div class="flex flex-row justify-between mb-8">
+                <h2 class="text-5xl">Casse-briques</h2>
+                <div class="text-right">
+                    <div class="text-sm">Février 2026</div>
+                    <div class="text-lg font-bold">Unreal Engine</div>
                 </div>
             </div>
 
-            <!-- Contenu -->
-            <div class="flex flex-row justify-between gap-20 w-full">
+            <hr class="opacity-20">
 
-                <div class="w-[50%]">
-                    <div class="w-full aspect-video mb-3 rounded-lg overflow-hidden bg-black">
-                        <iframe 
-                            src="https://www.youtube.com/embed/yxJNMHfz7NI" 
-                            title="Casse-Briques" 
-                            class="w-full h-full"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+            <div class="flex flex-row w-full mt-14 gap-6">
+                <!-- Carrousel : image principale -->
+                <div class="group relative flex-1 aspect-video overflow-hidden rounded-lg bg-[#141414]">
+                    <div id="carrousel-main" class="absolute inset-0 transition-opacity duration-150"></div>
+
+                    <button type="button" id="carrousel-prev" aria-label="Image précédente"
+                        class="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 opacity-0 transition duration-200 hover:bg-black/80 focus-visible:opacity-100 group-hover:opacity-100">
+                        <img src="../images/icons/fleche-g.webp" alt="" class="h-5">
+                    </button>
+
+                    <button type="button" id="carrousel-next" aria-label="Image suivante"
+                        class="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 opacity-0 transition duration-200 hover:bg-black/80 focus-visible:opacity-100 group-hover:opacity-100">
+                        <img src="../images/icons/fleche-d.webp" alt="" class="h-5">
+                    </button>
+                </div>
+
+                <!-- Carrousel : miniatures (scroll à la molette) -->
+                <div class="relative w-60 shrink-0">
+                    <div id="carrousel-thumbs" class="absolute inset-0 flex flex-col gap-4 overflow-y-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+
+                        <!-- Vidéo : data-src = URL de l'iframe, l'image sert de miniature -->
+                        <button type="button" data-carousel-item data-type="video" data-src="https://www.youtube.com/embed/yxJNMHfz7NI"
+                            class="relative aspect-video w-full shrink-0 cursor-pointer overflow-hidden rounded-lg bg-[#141414] opacity-50 transition duration-200 hover:opacity-100 focus-visible:opacity-100 data-[active=true]:opacity-100">
+                            <img src="../images/projets/casse-briques0.webp" alt="Aperçu vidéo" class="h-full w-full object-cover">
+                            <span class="absolute inset-0 flex items-center justify-center bg-black/30">
+                                <svg viewBox="0 0 24 24" class="h-10 w-10 fill-white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </button>
+
+                        <!-- Image -->
+                        <button type="button" data-carousel-item data-type="image" data-src="../images/projets/casse-briques1.webp"
+                            class="relative aspect-video w-full shrink-0 cursor-pointer overflow-hidden rounded-lg bg-[#141414] opacity-50 transition duration-200 hover:opacity-100 focus-visible:opacity-100 data-[active=true]:opacity-100">
+                            <img src="../images/projets/casse-briques1.webp" alt="Aperçu 1" class="h-full w-full object-cover">
+                        </button>
+
+                        <!-- Image -->
+                        <button type="button" data-carousel-item data-type="image" data-src="../images/projets/casse-briques2.webp"
+                            class="relative aspect-video w-full shrink-0 cursor-pointer overflow-hidden rounded-lg bg-[#141414] opacity-50 transition duration-200 hover:opacity-100 focus-visible:opacity-100 data-[active=true]:opacity-100">
+                            <img src="../images/projets/casse-briques2.webp" alt="Aperçu 1" class="h-full w-full object-cover">
+                        </button>
+
+                        <!-- Image -->
+                        <button type="button" data-carousel-item data-type="image" data-src="../images/projets/casse-briques3.webp"
+                            class="relative aspect-video w-full shrink-0 cursor-pointer overflow-hidden rounded-lg bg-[#141414] opacity-50 transition duration-200 hover:opacity-100 focus-visible:opacity-100 data-[active=true]:opacity-100">
+                            <img src="../images/projets/casse-briques3.webp" alt="Aperçu 1" class="h-full w-full object-cover">
+                        </button>
                     </div>
                 </div>
 
-                <div class="w-[50%] flex flex-col gap-6">
-                    <div>
-                        Dans le cadre d'un cours de <strong>prototypage de jeux</strong>, nous devions recréer un casse-brique en 2D sur Unreal Engine, un moteur orienté 3D.
-                    </div>
-                    <div>
-                        Cela m'a fait découvrir la programmation en Blueprints, un système de fonctions reliables entre elles graphiquement. Lors de la génération d'une nouvelle balle à
-                        la destruction d'une brique, elle restait immobile; cela était dû au fait que la brique était supprimée avant qu'elle puisse transmettre l'impulsion. J'ai déplacé cette
-                        logique d'impulsion dans la raquette qui reste active tout au long de la partie. J'ai également eu des problèmes d'égalisation de l'éclairage entre le menu et la scène du jeu,
-                        ce qui m'a amené à explorer en profondeur les paramètres de rendu d'Unreal.
-                    </div>
-                    <div>
-                        Tout au long de ce projet, j'ai appris à mettre en place les principaux éléments qui composent un jeu (menus, gameplay et transitions de niveaux).
-                    </div>
+                <!-- Lightbox -->
+                <div id="lightbox" data-open="false"
+                    class="pointer-events-none fixed inset-0 z-[100] flex items-center justify-center bg-black/90 opacity-0 transition-opacity duration-200 data-[open=true]:pointer-events-auto data-[open=true]:opacity-100">
+                    <button type="button" id="lightbox-close" aria-label="Fermer"
+                        class="absolute right-8 top-8 cursor-pointer opacity-70 transition duration-200 hover:scale-110 hover:opacity-100">
+                        <img src="../images/icons/croix.webp" alt="Fermer" class="h-6 w-6">
+                    </button>
+                    <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] rounded-lg object-contain">
                 </div>
             </div>
+
+            <div class="flex flex-col mt-14 mb-16">
+                <h3 class="opacity-50 mb-2">CONTEXTE</h3>
+                <div class="mb-6">
+                    Dans le cadre d'un cours de prototypage de jeux, nous devions recréer un casse-brique en 2D sur Unreal Engine, un moteur orienté 3D.
+                </div>
+                <h3 class="opacity-50 mb-2">RÉALISATION DU PROJET</h3>
+                <div class="mb-6">
+                    Cela m'a fait découvrir la programmation en Blueprints, un système de fonctions reliables entre elles graphiquement. Lors de la génération d'une nouvelle balle à
+                    la destruction d'une brique, elle restait immobile; cela était dû au fait que la brique était supprimée avant qu'elle puisse transmettre l'impulsion. J'ai déplacé cette
+                    logique d'impulsion dans la raquette qui reste active tout au long de la partie. J'ai également eu des problèmes d'égalisation de l'éclairage entre le menu et la scène du jeu,
+                    ce qui m'a amené à explorer en profondeur les paramètres de rendu d'Unreal.
+                </div>
+                <h3 class="opacity-50 mb-2">CE QUE J'EN RETIENS</h3>
+                <div>
+                    Tout au long de ce projet, j'ai appris à mettre en place les principaux éléments qui composent un jeu (menus, gameplay et transitions de niveaux).
+                </div>
+            </div>
+
+            <hr class="opacity-20">
 
             <!-- Boutons Précédent/Suivant -->
-            <section class="bg-[#0d0d0d] flex items-center justify-between">
+            <section class="text-lg uppercase bg-[#0d0d0d] flex items-center justify-between mt-8">
                 <a class="flex items-center gap-4 transition-opacity hover:opacity-50" href="pause-cafe.html">
-                    <img src="../images/icons/fleche-g.png" alt="Précédent" class="h-5 w-auto sm:h-6">
-                    <span class="hidden sm:inline">Projet précédent</span>
+                    <img src="../images/icons/fleche-g.webp" alt="Précédent" class="h-5">
+                    <h3>PROJET PRÉCÉDENT</h3>
                 </a>
 
                 <a class="flex items-center gap-4 transition-opacity hover:opacity-50" href="le-cube.html">
-                    <span class="hidden sm:inline">Projet suivant</span>
-                    <img src="../images/icons/fleche-d.png" alt="Suivant" class="h-5 w-auto sm:h-6">
-                    </a>
+                    <h3>PROJET SUIVANT</h3>
+                    <img src="../images/icons/fleche-d.webp" alt="Suivant" class="h-5">
+                </a>
             </section>
         </section>
 
         <!-- Footer -->
-        <hr class="opacity-20 mt-16">
+        <hr class="opacity-20 mt-20">
         <footer class="b-0 bg-[#141414] py-6 sm:py-8 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col sm:flex-row justify-between items-center sm:gap-0 text-sm sm:text-base" >
             <div class="opacity-50">© 2026 Témi Kergastel</div>
 
@@ -97,16 +146,16 @@
                     Contactez-moi !
                 </a>
                 <a href="mailto:temi.kergastel@gmail.com" target="_blank">
-                    <img src="../images/icons/mail.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
+                    <img src="../images/icons/mail.webp" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
                 <a href="https://linkedin.com/in/témi-kergastel/" target="_blank">
-                    <img src="../images/icons/linkedin.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
+                    <img src="../images/icons/linkedin.webp" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
                 <a href="https://github.com/Temouche" target="_blank">
-                    <img src="../images/icons/github.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
+                    <img src="../images/icons/github.webp" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
                 <a href="../assets/CV_Témi_Kergastel.pdf" target="_blank">
-                    <img src="../images/icons/cv.png" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
+                    <img src="../images/icons/cv.webp" class="transition-transform w-6 h-6 duration-200 hover:scale-110">
                 </a>
             </div>
         </footer>

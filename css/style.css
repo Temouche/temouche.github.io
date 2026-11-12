@@ -17,3 +17,32 @@ h1,h2 {
   font-family: "Manrope-Regular";
   src: url("../assets/manrope/Manrope-Regular.ttf");
 }
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 10rem;
+  padding: 1rem 0.75rem;
+  background: #141414;
+  border-radius: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.skill:hover {
+  background: #242424;
+  transform: translateY(-4px);
+}
+.skill img {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+}
+.skill span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4em;
+  text-align: center;
+}
