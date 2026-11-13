@@ -10,9 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Page qui n'a pas de carrousel : on ne fait rien
     if (!main || !thumbs || items.length === 0) return;
-  
+
     let current = 0;
     let fadeTimer = null;
+
+    // Les miniatures sont en colonne sur grand écran, en ligne sous l'image sur tablette/mobile
+    const isRow = () => getComputedStyle(thumbs).flexDirection === 'row';
 
     /* ---------- Visuel principal ---------- */
 
@@ -41,19 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
         img.addEventListener('click', () => openLightbox(src, img.alt));
         return img;
     }
-    
+
     function updateArrows() {
-    // L'attribut hidden masque complètement la flèche
-    prevBtn.hidden = current === 0;
-    nextBtn.hidden = current === items.length - 1;
+        // L'attribut hidden masque complètement la flèche
+        prevBtn.hidden = current === 0;
+        nextBtn.hidden = current === items.length - 1;
     }
 
-    // Garde la miniature active visible dans la colonne
+    // Garde la miniature active visible (verticalement ou horizontalement)
     function scrollThumbIntoView(item) {
+        if (isRow()) {
+            const left = item.offsetLeft;
+            const right = left + item.offsetWidth;
+            if (left < thumbs.scrollLeft) {
+                thumbs.scrollTo({ left, behavior: 'smooth' });
+            } else if (right > thumbs.scrollLeft + thumbs.clientWidth) {
+                thumbs.scrollTo({ left: right - thumbs.clientWidth, behavior: 'smooth' });
+            }
+            return;
+        }
+
         const top = item.offsetTop;
         const bottom = top + item.offsetHeight;
         if (top < thumbs.scrollTop) {
-            thumbs.scrollTo({ top: top, behavior: 'smooth' });
+            thumbs.scrollTo({ top, behavior: 'smooth' });
         } else if (bottom > thumbs.scrollTop + thumbs.clientHeight) {
             thumbs.scrollTo({ top: bottom - thumbs.clientHeight, behavior: 'smooth' });
         }
@@ -84,13 +98,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- Miniatures : fondu en bas tant qu'on peut scroller ---------- */
+    prevBtn.addEventListener('click', () => {
+        if (current > 0) show(current - 1);
+    });
+    nextBtn.addEventListener('click', () => {
+        if (current < items.length - 1) show(current + 1);
+    });
+
+    // Balayage au doigt sur l'image principale (mobile / tablette)
+    const stage = main.parentElement;
+    let touchX = null;
+    stage.addEventListener('touchstart', (e) => {
+        touchX = e.touches[0].clientX;
+    }, { passive: true });
+    stage.addEventListener('touchend', (e) => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        touchX = null;
+        if (Math.abs(dx) < 50) return;
+        if (dx < 0 && current < items.length - 1) show(current + 1);
+        if (dx > 0 && current > 0) show(current - 1);
+    }, { passive: true });
+
+    /* ---------- Miniatures : fondu au bord tant qu'on peut scroller ---------- */
 
     function updateFade() {
-        const canScroll = thumbs.scrollHeight > thumbs.clientHeight + 2;
-        const atEnd = thumbs.scrollTop + thumbs.clientHeight >= thumbs.scrollHeight - 2;
+        const row = isRow();
+        const size = row ? thumbs.clientWidth : thumbs.clientHeight;
+        const total = row ? thumbs.scrollWidth : thumbs.scrollHeight;
+        const pos = row ? thumbs.scrollLeft : thumbs.scrollTop;
+        const canScroll = total > size + 2;
+        const atEnd = pos + size >= total - 2;
+
         const mask = canScroll && !atEnd
-            ? 'linear-gradient(to bottom, #000 calc(100% - 80px), transparent)'
+            ? `linear-gradient(${row ? 'to right' : 'to bottom'}, #000 calc(100% - ${row ? 48 : 80}px), transparent)`
             : 'none';
 
         thumbs.style.maskImage = mask;
@@ -100,13 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     thumbs.addEventListener('scroll', updateFade, { passive: true });
     window.addEventListener('resize', updateFade);
     window.addEventListener('load', updateFade);
-
-    prevBtn.addEventListener('click', () => {
-    if (current > 0) show(current - 1);
-    });
-    nextBtn.addEventListener('click', () => {
-        if (current < items.length - 1) show(current + 1);
-    });
 
     /* ---------- Lightbox ---------- */
 
