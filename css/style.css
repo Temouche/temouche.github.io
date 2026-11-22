@@ -11,9 +11,11 @@ h1,h2 {
 @font-face {
   font-family: "Apollo";
   src: url("../assets/APOLLO.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Manrope-Regular";
   src: url("../assets/manrope/Manrope-Regular.ttf");
+  font-display: swap;
 }
